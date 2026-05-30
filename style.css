@@ -169,11 +169,14 @@ input:focus, textarea:focus {
     gap: 16px;
     margin-top: 32px;
 }
-.about-certificates img {
-    flex: 1; /* Pildid jagavad ruumi võrdselt pooleks */
+.about-certificates a {
+    flex: 1; /* Lingid jagavad ruumi võrdselt pooleks */
     max-width: 200px; /* Ei lase piltidel hiiglaslikuks minna */
+    display: block;
+}
+.about-certificates img {
+    width: 100%;
     height: auto;
-    border: 1px solid var(--border-color);
     border-radius: 4px;
     object-fit: contain;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
