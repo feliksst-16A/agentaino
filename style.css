@@ -6,7 +6,7 @@
     --bg-color: #ffffff;
     --text-main: #111111;
     --text-muted: #666666;
-    --accent: #2563eb; /* Kaasaegne koobalt-sinine */
+    --accent: #2563eb; 
     --accent-hover: #1d4ed8;
     --border-color: #eeeeee;
     
@@ -102,40 +102,53 @@ em {
 
 /* Hero / Uudiskiri */
 .hero-section {
-    padding: 120px 0 80px 0;
+    padding: 140px 0 100px 0;
     text-align: center;
 }
 
-.hero-container { max-width: 800px; }
-.subtitle { font-size: 1.2rem; margin-bottom: 32px; }
+.hero-container { max-width: 850px; }
+.subtitle { font-size: 1.25rem; margin-bottom: 32px; }
 
 .newsletter-form {
     display: flex;
     gap: 12px;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto 16px auto;
 }
 
+.form-explanation {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Tekstikastide kapitaalne uuendus - Suuremad ja loetavamad */
 input[type="email"], input[type="text"], textarea {
     width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 16px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
     font-family: var(--font-sans);
-    font-size: 1px;
+    font-size: 1.1rem; /* Parandatud suurus mugavaks trükkimiseks */
+    color: var(--text-main);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
 }
 
-input:focus, textarea:focus { border-color: var(--accent); }
+input:focus, textarea:focus { 
+    border-color: var(--text-main);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
 
 .btn {
     background-color: var(--text-main);
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
+    padding: 16px 32px;
+    border-radius: 6px;
     font-family: var(--font-sans);
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
     white-space: nowrap;
@@ -148,6 +161,7 @@ input:focus, textarea:focus { border-color: var(--accent); }
 .about-section { padding: 80px 0; background: #fafafa; }
 .about-container { display: flex; gap: 64px; align-items: center; }
 .about-text { flex: 1; }
+.about-text p { font-size: 1.1rem; color: var(--text-muted); }
 .about-image { flex: 1; text-align: center; }
 .about-image img { max-width: 100%; height: auto; border-radius: 6px; filter: grayscale(100%); transition: filter 0.3s; }
 .about-image img:hover { filter: grayscale(0%); }
@@ -166,18 +180,16 @@ input:focus, textarea:focus { border-color: var(--accent); }
 .contact-section { padding: 80px 0; border-top: 1px solid var(--border-color); }
 .contact-container { display: flex; gap: 64px; }
 .contact-info, .contact-form { flex: 1; }
-.social-links a { display: inline-block; margin-right: 16px; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 500; }
-.form-group { margin-bottom: 16px; }
-.form-group label { display: block; font-size: 0.85rem; margin-bottom: 6px; font-weight: 500; }
+.social-links a { display: inline-block; margin-right: 16px; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 0.9rem; margin-bottom: 8px; font-weight: 500; }
 
 /* Jalus */
-.site-footer { border-top: 1px solid var(--border-color); padding: 40px 0; font-size: 0.85rem; color: var(--text-muted); }
+.site-footer { border-top: 1px solid var(--border-color); padding: 40px 0; font-size: 0.9rem; color: var(--text-muted); }
 .footer-container { display: flex; justify-content: space-between; align-items: center; }
 .footer-contact { margin-top: 4px; }
-.certificates { margin-bottom: 8px; text-align: right; }
+.certificates { text-align: right; }
 .cert-badge { display: inline-block; background: #eee; color: #333; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-size: 0.75rem; }
-.footer-links a { color: var(--text-muted); margin-left: 12px; text-decoration: none; }
-.footer-links a:hover { color: var(--text-main); }
 
 /* Artiklipõhine spetsiifiline stiil */
 .article-layout { max-width: 700px; padding: 60px 24px; }
@@ -192,5 +204,5 @@ input:focus, textarea:focus { border-color: var(--accent); }
     .about-container, .contact-container, .footer-container { flex-direction: column; gap: 32px; text-align: center; }
     .blog-grid { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
-    .certificates, .footer-right { text-align: center; }
+    .certificates { text-align: center; }
 }
