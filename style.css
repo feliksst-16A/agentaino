@@ -68,7 +68,7 @@ em {
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
     z-index: 100;
 }
@@ -78,6 +78,7 @@ em {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
 }
 
 .logo {
@@ -90,6 +91,11 @@ em {
 
 .logo span { color: var(--accent); }
 
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
 .main-nav a {
     text-decoration: none;
     color: var(--text-muted);
@@ -99,6 +105,28 @@ em {
 }
 
 .main-nav a:hover { color: var(--text-main); }
+
+/* Burger Menüü nupp (Desktopis peidus) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-main);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 /* Hero / Uudiskiri */
 .hero-section {
@@ -157,7 +185,7 @@ input:focus, textarea:focus {
 
 .btn:hover { background-color: var(--accent); }
 
-/* UUS: Meedia sektsioon (Õhuke logoriba Hero all) */
+/* Meedia sektsioon (Logoriba) */
 .media-section {
     background-color: #fafafa;
     border-top: 1px solid var(--border-color);
@@ -185,9 +213,7 @@ input:focus, textarea:focus {
     flex-grow: 1;
     gap: 48px;
 }
-.media-logos a {
-    display: block;
-}
+.media-logos a { display: block; }
 .media-logos img {
     max-height: 38px;
     width: auto;
@@ -212,7 +238,7 @@ input:focus, textarea:focus {
 .about-image img { max-width: 100%; height: auto; border-radius: 6px; filter: grayscale(100%); transition: filter 0.3s; }
 .about-image img:hover { filter: grayscale(0%); }
 
-/* UUS: Tunnustuste ja sertifikaatide täislaiuses sektsioon */
+/* Tunnustuste ja sertifikaatide sektsioon (Uuendatud: 50% väiksem ja alati vasakul) */
 .certificates-section {
     padding: 90px 0;
     background-color: #fafafa;
@@ -220,19 +246,21 @@ input:focus, textarea:focus {
     border-bottom: 1px solid var(--border-color);
 }
 .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 32px;
+    display: flex;
+    gap: 24px;
     margin-top: 32px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .certificates-grid a {
     display: block;
     background: #ffffff;
-    padding: 24px;
+    padding: 16px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    max-width: 140px; /* Täpselt 50% väiksem soliidne disain */
     text-align: center;
 }
 .certificates-grid a:hover {
@@ -240,7 +268,7 @@ input:focus, textarea:focus {
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 .certificates-grid img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -290,12 +318,57 @@ input:focus, textarea:focus {
     h1 { font-size: 2.3rem; }
     .about-container, .contact-container, .footer-container { flex-direction: column; gap: 32px; text-align: center; }
     
+    /* Aktiveerime funktsionaalse Burger-menüü */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Muudame horisontaalse menüü rippmenüüks */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    
+    .main-nav.active {
+        display: flex;
+    }
+    
+    .main-nav a {
+        margin-left: 0;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: left;
+        padding: 6px 0;
+    }
+    
+    /* Burger ikooni animatsioon active olekus */
+    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
     .media-container { flex-direction: column; gap: 20px; text-align: center; }
     .media-logos { flex-wrap: wrap; justify-content: center; gap: 28px; }
     .media-logos img { max-height: 32px; }
     
-    .certificates-grid { grid-template-columns: 1fr; justify-items: center; gap: 20px; }
-    .certificates-grid a { max-width: 280px; width: 100%; }
+    /* Sertifikaadid mobiilis: jäävad väikseks ja joondatuks vasakule */
+    .certificates-grid {
+        justify-content: flex-start;
+        gap: 16px;
+    }
+    .certificates-grid a {
+        max-width: 120px;
+        padding: 12px;
+    }
     
     .blog-grid { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
