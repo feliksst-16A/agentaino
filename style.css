@@ -122,7 +122,7 @@ em {
     font-style: italic;
 }
 
-/* Tekstikastide kapitaalne uuendus - Suuremad ja loetavamad */
+/* Tekstikastide kapitaalne uuendus */
 input[type="email"], input[type="text"], textarea {
     width: 100%;
     padding: 16px 20px;
@@ -170,8 +170,8 @@ input:focus, textarea:focus {
     margin-top: 32px;
 }
 .about-certificates a {
-    flex: 1; /* Lingid jagavad ruumi võrdselt pooleks */
-    max-width: 200px; /* Ei lase piltidel hiiglaslikuks minna */
+    flex: 1;
+    max-width: 200px;
     display: block;
 }
 .about-certificates img {
@@ -212,21 +212,56 @@ input:focus, textarea:focus {
 .cert-badge { display: inline-block; background: #eee; color: #333; padding: 2px 8px; border-radius: 4px; margin-left: 8px; font-size: 0.75rem; }
 
 /* Artiklipõhine spetsiifiline stiil */
-.article-layout { max-width: 700px; padding: 60px 24px; }
-.article-header { margin-bottom: 32px; }
-.article-content p { color: var(--text-main); font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; }
-.article-content ul { margin-left: 24px; margin-bottom: 24px; }
-.article-content li { margin-bottom: 8px; color: var(--text-main); }
+.article-layout { max-width: 750px; padding: 60px 24px; margin: 0 auto; }
+.article-header { margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px; }
+.article-content h2 { font-size: 2rem; margin-top: 40px; margin-bottom: 16px; border-bottom: none; padding-bottom: 0; }
+.article-content h3 { font-size: 1.3rem; margin-top: 24px; margin-bottom: 8px; font-family: var(--font-sans); font-weight: 600; color: var(--text-main); }
+.article-content p { color: var(--text-main); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; }
+.article-content ul, .article-content ol { margin-left: 24px; margin-bottom: 24px; }
+.article-content li { margin-bottom: 10px; color: var(--text-main); font-size: 1.1rem; }
 
-/* Mobiilne kohanduvus (Responsive) */
+/* Uued: artikli sees asuvate piltide ja tabelite modernne disain */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 32px 0;
+    display: block;
+}
+
+.article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 1rem;
+}
+
+.article-content th, .article-content td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.article-content th {
+    background-color: #fafafa;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.faq-section {
+    background-color: #fafafa;
+    padding: 24px;
+    border-radius: 6px;
+    margin: 32px 0;
+}
+
+/* Mobiilne kohanduvus */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
+    h1 { font-size: 2.3rem; }
     .about-container, .contact-container, .footer-container { flex-direction: column; gap: 32px; text-align: center; }
-    
-    /* Et mobiilis joonduksid sertifikaadid ka keskele */
     .about-certificates { justify-content: center; }
-    
     .blog-grid { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
     .certificates { text-align: center; }
+    .article-content table { display: block; overflow-x: auto; } /* Muudab tabeli mobiilis skrollitavaks */
 }
