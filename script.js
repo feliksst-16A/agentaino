@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobiilimenüü (Burger menu) funktsionaalsus
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Sulge menüü, kui klikitakse mõnel lingil (mugavam navigeerimine ühelehe veebis)
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    }
+
     // Uudiskirja vormi submit
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
