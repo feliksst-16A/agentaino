@@ -19,16 +19,33 @@
     <!-- Stiilifail -->
     <link rel="stylesheet" href="../style.css">
 
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X"></script>
+    <!-- DÜNAAMILINE GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1CKNGQQE0X');
+      // 1. KONTROLL: Kas kasutaja tuli salajase lingiga?
+      if (window.location.search.includes('admin=true')) {
+          localStorage.setItem('peida_minu_liiklus', 'true');
+          alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
+      }
+
+      // 2. KONTROLL: Kas brauseri mälus on välistamise märge olemas?
+      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
+          // Kui märget EI OLE (tavaline külastaja), siis laeme Google Analyticsi
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+          document.head.appendChild(gaScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1CKNGQQE0X');
+      } else {
+          // Kui märge ON olemas (Sina), siis konsooli jäetakse teade ja GA-d ei laeta
+          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+      }
     </script>
 
-    <!-- GEO / SEO Kombineeritud JSON-LD Struktureeritud andmed (BlogPosting + FAQPage) -->
+    <!-- GEO / SEO Kombineeritud JSON-LD ) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,7 +54,7 @@
           "@type": "BlogPosting",
           "@id": "https://agentaino.ee/blogi/ai-vastustesse-checklist.html#article",
           "headline": "Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist",
-          "description": "Praktiline checklist ja strateegia brändide optimeerimiseks LLM-põhistele platvormidele nagu ChatGPT ja Perplexity.",
+          "description": "Praktiline checklist ja strateegia brändide optimeerimiseks LLM-põhistele platvormidele nagu ChatGPT ja Perplexity.[cite: 1]",
           "datePublished": "2026-06-01",
           "dateModified": "2026-06-01",
           "author": {
@@ -61,7 +78,7 @@
               "name": "Kas väikeettevõte vajab CRM-i?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Jah, isegi 2–3 inimesega meeskond saab kasu CRM-ist, kui klientide arv ületab 50 ja müügiprotsess kestab üle ühe kontakti."
+                "text": "Jah, isegi 2–3 inimesega meeskond saab kasu CRM-ist, kui klientide arv ületab 50 ja müügiprotsess kestab üle ühe kontakti.[cite: 1]"
               }
             }
           ]
@@ -96,162 +113,162 @@
     <main class="container article-layout">
         <article>
             <header class="article-header">
-                <h1>Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist</h1>
+                <h1>Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist[cite: 1]</h1>
                 <p class="subtitle" style="font-size: 0.95rem; margin-bottom: 0;">
-                    Avaldatud: <strong>2026</strong> | Autor: <strong>Feliks Stavitski</strong> | Viimati uuendatud: <strong>mai 2026</strong>
+                    Avaldatud: <strong>2026</strong> | Autor: <strong>Feliks Stavitski</strong> | Viimati uuendatud: <strong>mai 2026</strong>[cite: 1]
                 </p>
             </header>
 
             <div class="article-content">
-                <p>Mul on klient, kes tegi kõike õigesti — SEO, linkide kogumine, sisukad artiklid blogis. Ja seetõttu jõudis see veebileht ka Google'i esilehele. Väga hea. Aga siis küsis ta minult ühe küsimuse, millele mul siis polnud veel head vastust anda: <em>"Miks mind ChatGPT ei maini, kui keegi küsib just selle kohta, millest ma veebilehel räägin?"</em></p>
-                <p>See on küsimus, mida kolm aastat tagasi poleks keegi küsinudki. Tänaseks on see muutunud küsimuseks, mis peaks iga turundusjuhi öörahu tugevalt häirima.</p>
-                <p>Google'i otsingu klikimäär kukub. Perplexity vastab kohe otse. ChatGPT koostab kokkuvõtteid. Inimesed saavamad vastused kätte ilma, et nad sinu veebilehele üldse jõuaksid ja (üllatuseks) on see parim stsenaarium. Halvim on lihtsalt see, et sinu brändi nimi ei tule seal üldse jutuks.</p>
-                <p>Siin on sulle praktiline checklist — platvormide kaupa, samm-sammult.</p>
+                <p>Mul on klient, kes tegi kõike õigesti — SEO, linkide kogumine, sisukad artiklid blogis. Ja seetõttu jõudis see veebileht ka Google'i esilehele. Väga hea. Aga siis küsis ta minult ühe küsimuse, millele mul siis polnud vielä head vastust anda: <em>"Miks mind ChatGPT ei maini, kui keegi küsib just selle kohta, millest ma veebilehel räägin?"[cite: 1]</em></p>
+                <p>See on küsimus, mida kolm aastat tagasi poleks keegi küsinudki. Tänaseks on see muutunud küsimuseks, mis peaks iga turundusjuhi öörahu tugevalt häirima.[cite: 1]</p>
+                <p>Google'i otsingu klikimäär kukub. Perplexity vastab kohe otse. ChatGPT koostab kokkuvõtteid. Inimesed saavad vastused kätte ilma, et nad sinu veebilehele üldse jõuaksid ja (üllatuseks) on see parim stsenaarium. Halvim on lihtsalt see, et sinu brändi nimi ei tule seal üldse jutuks.[cite: 1]</p>
+                <p>Siin on sulle praktiline checklist — platvormide kaupa, samm-sammult.[cite: 1]</p>
 
-                <h2>Miks eri platvormid käituvad erinevalt</h2>
-                <p>Enne checklistini jõudmist on oluline mõista, et ChatGPT, Perplexity, Gemini ja Google AI Overview ei tee ühte ja sama asja. Neil on erinevad andmeallikad, erinevad loogikad ja seega erinevad reeglid selle kohta, keda, millal ja mida nad tsiteerivad.</p>
+                <h2>Miks eri platvormid käituvad erinevalt[cite: 1]</h2>
+                <p>Enne checklistini jõudmist on oluline mõista, et ChatGPT, Perplexity, Gemini ja Google AI Overview ei tee ühte ja sama asja. Neil on erinevad andmeallikad, erinevad loogikad ja seega erinevad reeglid selle kohta, keda, millal ja mida nad tsiteerivad.[cite: 1]</p>
                 <ul>
-                    <li><strong>ChatGPT (OpenAI):</strong> kasutab koolitusandmetena peamiselt interneti sisu kuni teatud kuupäevani, pluss Bingi otsingut reaalajas. See eelistab autoriteetseid, hästi struktureeritud allikaid. Ei tsiteeri allikat alati otseselt, aga "mäletab" brände ja nimesid, mida on internetis korduvalt mainitud.</li>
-                    <li><strong>Perplexity:</strong> on sisuliselt otsingumootor, mis genereerib vastuse reaalajas leitud lehekülgedest. Tsiteerib allikaid otseselt ja nähtavalt. See tähendab, et siin on kõige otsesem seos "mu veebileht on allikas" ja "Perplexity mainib mind" vahel.</li>
-                    <li><strong>Google Gemini ja AI Overviews:</strong> kasutab Google'i enda indeksit. Siin kehtib suuremas osas sama loogika, mis klassikalises SEO-s, ainult et tulemus genereeritakse kohe vastusena ja paljud lingid jäävad klikkimata. Eelistab E-E-A-T signaale (kogemus, asjatundlikkus, autoriteet, usaldusväärsus).</li>
-                    <li><strong>Bing Copilot:</strong> toetub Bingi indeksile. Kui oled Bingis nähtav, oled tõenäoliselt ka Copilotis nähtav.</li>
+                    <li><strong>ChatGPT (OpenAI):</strong> kasutab koolitusandmetena peamiselt interneti sisu kuni teatud kuupäevani, pluss Bingi otsingut reaalajas.[cite: 1] See eelistab autoriteetseid, hästi struktureeritud allikaid.[cite: 1] Ei tsiteeri allikat alati otseselt, aga "mäletab" brände ja nimesid, mida on internetis korduvalt mainitud.[cite: 1]</li>
+                    <li><strong>Perplexity:</strong> on sisuliselt otsingumootor, mis genereerib vastuse reaalajas leitud lehekülgedest.[cite: 1] Tsiteerib allikaid otseselt ja nähtavalt.[cite: 1] See tähendab, et siin on kõige otsesem seos "mu veebileht on allikas" ja "Perplexity mainib mind" vahel.[cite: 1]</li>
+                    <li><strong>Google Gemini ja AI Overviews:</strong> kasutab Google'i enda indeksit.[cite: 1] Siin kehtib suuremas osas sama loogika, mis klassikalises SEO-s, ainult et tulemus genereeritakse kohe vastusena ja paljud lingid jäävad klikkimata.[cite: 1] Eelistab E-E-A-T signaale (kogemus, asjatundlikkus, autoriteet, usaldusväärsus).[cite: 1]</li>
+                    <li><strong>Bing Copilot:</strong> toetub Bingi indeksile.[cite: 1] Kui oled Bingis nähtav, oled tõenäoliselt ka Copilotis nähtav.[cite: 1]</li>
                 </ul>
 
                 <img src="../assets/Eri_AI_platvormid_käituvad_erinevalt.webp" alt="Võrdlusgraafik tehisintellekti platvormide ChatGPT, Perplexity ja Google AI erinevatest sisu tsiteerimise loogikatest ja algoritmidest" loading="lazy">
 
-                <h2>Checklist: mis tegelikult töötab</h2>
+                <h2>Checklist: mis tegelikult töötab[cite: 1]</h2>
 
-                <h3>1. Kirjuta küsimusele vastava struktuuriga sisu</h3>
-                <p>AI-d otsivad vastuseid, mitte lihtsalt teemasid. Kui keegi küsib "milline CRM sobib väikeettevõttele", siis AI tahab sulle leida lehe, mis vastab otseselt sellele küsimusele. Mitte lehe, mis räägib CRM-ist üldiselt.</p>
-                <p><strong>Mida teha:</strong></p>
+                <h3>1. Kirjuta küsimusele vastava struktuuriga sisu[cite: 1]</h3>
+                <p>AI-d otsivad vastuseid, mitte lihtsalt teemasid.[cite: 1] Kui keegi küsib "milline CRM sobib väikeettevõttele", siis AI tahab sulle leida lehe, mis vastab otseselt sellele küsimusele.[cite: 1] Mitte lehe, mis räägib CRM-ist üldiselt.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
-                    <li>Lisa artiklisse selgelt sõnastatud küsimus pealkirjana või alapealkirjana.</li>
-                    <li>Anna sellele kohe selge, ühte-kahte lausesse mahtuv vastus (see ongi lõik, mida AI tõenäoliselt tsiteerib).</li>
-                    <li>Seejärel ava teema sügavamalt.</li>
+                    <li>Lisa artiklisse selgelt sõnastatud küsimus pealkirjana või alapealkirjana.[cite: 1]</li>
+                    <li>Anna sellele kohe selge, ühte-kahte lausesse mahtuv vastus (see ongi lõik, mida AI tõenäoliselt tsiteerib).[cite: 1]</li>
+                    <li>Seejärel ava teema sügavamalt.[cite: 1]</li>
                 </ul>
-                <p>See on nn <em>"answer-first"</em> kirjutamisstiil — pane vastus ette, pikem seletus järgi. Koolides õpetatakse muidugi vastupidist, aga AI eelistab millegipärast seda varianti.</p>
+                <p>See on nn <em>"answer-first"</em> kirjutamisstiil — pane vastus ette, pikem seletus järgi.[cite: 1] Koolides õpetatakse muidugi vastupidist, aga AI eelistab millegipärast seda varianti.[cite: 1]</p>
 
-                <h3>2. Kasuta FAQ (KKK) sektsiooni iga olulise artikli lõpus</h3>
-                <p>Struktureeritud küsimus-vastus formaadis sisu on AI-de lemmik. See on seeditav, selge ja kordab küsimus-vastus struktuuri loomulikult.</p>
-                <p><strong>Mida teha:</strong></p>
+                <h3>2. Kasuta FAQ (KKK) sektsiooni iga olulise artikli lõpus[cite: 1]</h3>
+                <p>Struktureeritud küsimus-vastus formaadis sisu on AI-de lemmik.[cite: 1] See on seeditav, selge ja kordab küsimus-vastus struktuuri loomulikult.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
-                    <li>Lisa iga põhiartikli lõppu 4–8 küsimust koos konkreetsete vastustega.</li>
-                    <li>Sõnasta küsimused nii, nagu inimesed päriselt küsiksid (mitte "Mis on CRM?" vaid "Kas väikeettevõte vajab üldse CRM-i?").</li>
-                    <li>Ära pane sinna turunduslikke vastuseid — anna infot.</li>
+                    <li>Lisa iga põhiartikli lõppu 4–8 küsimust koos konkreetsete vastustega.[cite: 1]</li>
+                    <li>Sõnasta küsimused nii, nagu inimesed päriselt küsiksid (mitte "Mis on CRM?" vaid "Kas väikeettevõte vajab üldse CRM-i?").[cite: 1]</li>
+                    <li>Ära pane sinna turunduslikke vastuseid — anna infot.[cite: 1]</li>
                 </ul>
-                <p>Perplexity armastab FAQ sektsioone. ChatGPT koolitusfaasis lausa imeb need andmed sisse. Google kasutab neid Featured Snippets'ites ja AI Overviews'ides.</p>
+                <p>Perplexity armastab FAQ sektsioone.[cite: 1] ChatGPT koolitusfaasis lausa imeb need andmed sisse.[cite: 1] Google kasutab neid Featured Snippets'ites ja AI Overviews'ides.[cite: 1]</p>
 
-                <h3>3. Lisa Schema markup. Vähemalt FAQ ja Article tüüp</h3>
-                <p>Schema markup on tehniline kood, mis ütleb otsingumootorite robotitele ja AI-kraapijatele (scrapers) täpselt, mis tüüpi sisuga tegu on. See ei garanteeri tsiteerimist, aga parandab oluliselt sinu võimalusi.</p>
-                <p><strong>Minimaalne, mida teha:</strong></p>
+                <h3>3. Lisa Schema markup. Vähemalt FAQ ja Article tüüp[cite: 1]</h3>
+                <p>Schema markup on tehniline kood, mis ütleb otsingumootorite robotitele ja AI-kraapijatele (scrapers) täpselt, mis tüüpi sisuga tegu on.[cite: 1] See ei garanteeri tsiteerimist, aga parandab oluliselt sinu võimalusi.[cite: 1]</p>
+                <p><strong>Minimaalne, mida teha:</strong>[cite: 1]</p>
                 <ul>
-                    <li>FAQPage schema — KKK sektsioonidele.</li>
-                    <li>Article schema — kõigile blogiartiklitele (koos author, datePublished, dateModified väljadega).</li>
-                    <li>Organization schema — kodulehele (koos nime, logo, kontakti ja sotsiaalmeedia linkidega).</li>
-                </ul>
-
-                <h3>4. Kasvata autoriteeti - nii inimeste kui masinate jaoks</h3>
-                <p>ChatGPT ei tsiteeri anonüümseid blogisid ja lugusid. Ta tsiteerib nimesid, brände ja väljaandeid, mida ta on "näinud" mitmetes kohtades korraga. See on digitaalne maine, mida ei saa osta. Seda saab ainult üles ehitada ja kasvatada.</p>
-                <p><strong>Mida teha:</strong></p>
-                <ul>
-                    <li>Kirjuta külalisartikleid väljaannetesse, kus su sihtrühm tihti käib.</li>
-                    <li>Lase end intervjueerida podcastides, YouTube'i kanalites, artiklites — kõik transkriptid indekseeritakse.</li>
-                    <li>Taga, et su autorilehel on pärisnimi, foto, lühike bio ja lingid sotsiaalmeediasse.</li>
-                    <li>Lisa artiklitele autor (pärisnimi, mitte "toimetaja" ega "admin").</li>
-                </ul>
-                <p>Gemini ja Google AI Overviews on E-E-A-T suhtes eriti tundlikud — "kogemus" on Google'i jaoks oluline signaal, et sisu kirjutas keegi, kes päriselt valdkonnast midagi teab.</p>
-
-                <h3>5. Hangi linke autoriteetsetelt lehtedelt (eriti Perplexity jaoks)</h3>
-                <p>Perplexity töötab otse reaalajas — ta leiab sinu lehe, loeb seda ja otsustab, kas tsiteerida või mitte. Aga ta eelistab alati neid lehti, millel on juba autoriteet. Autoriteet tuleb sissetulevate linkide kvaliteedist ja hulgast.</p>
-                <p><strong>Mida teha:</strong></p>
-                <ul>
-                    <li>Loo "linkimisväärset" sisu — andmete kokkuvõtted, originaaluuringud, praktilised tööriistad, checklistid (just nagu see artikkel).</li>
-                    <li>Tee koostöös teiste valdkonna ekspertidega artikleid — nad ise jagavad seda lugu, mis toob linke.</li>
-                    <li>Lisa end valdkonna ressursside nimekirjadesse ja kataloogidesse.</li>
-                    <li>Proovi saada tsiteeritud autoriteetsetes meediaartiklites.</li>
-                </ul>
-                <p>Perplexity jaoks on oluline ka lehe laadimiskiirus ja mobiilisõbralikkus — kui robot ei suuda lehte kiiresti läbi lugeda, jäetakse see vahele. Kiirus iseenesest on oluline kõikide puhul, aga Perplexity hindab seda eriti kõrgelt.</p>
-
-                <h3>6. Optimeeri ChatGPT jaoks spetsiifiliselt - mainimine, mitte ainult positsioon</h3>
-                <p>ChatGPT ei kasuta reaalajas indeksit (välja arvatud live otsimisel). Ta põhineb koolitusandmetele ja Bingi otsingule. See tähendab, et klassikaline SEO-positsioon pole piisav — oluline on, et su bränd esineks paljudes kohtades tekstiliselt.</p>
-                <p><strong>Mida teha:</strong></p>
-                <ul>
-                    <li>Taga see, et su ettevõtte nimi, tooted ja teenused on mainitud usaldusväärsetel saitidel (Wikipedia, sinu eriala kataloogid, usaldusväärsed blogid).</li>
-                    <li>Kirjuta selges ja arusaadavas keeles — keeruline metafoor on igati vahva, aga jääb AI-l sageli tõlkimata.</li>
-                    <li>Kasuta konkreetseid arve, fakte ja andmeid — need on tsiteerimise magnetid.</li>
-                    <li>Loo oma brändi "definitsioon" — selge ühelauseline selgitus, mida sa teed ja kellele.</li>
+                    <li>FAQPage schema — KKK sektsioonidele.[cite: 1]</li>
+                    <li>Article schema — kõigile blogiartiklitele (koos author, datePublished, dateModified väljadega).[cite: 1]</li>
+                    <li>Organization schema — kodulehele (koos nime, logo, kontakti ja sotsiaalmeedia linkidega).[cite: 1]</li>
                 </ul>
 
-                <h3>7. Bing'is nähtavus = Copilot'is nähtavus</h3>
-                <p>Microsoft Copilot kasutab Bingi indeksit. Kui su sait pole Bingis indekseeritud, pole sa Copilotis olemas.</p>
-                <p><strong>Mida teha:</strong></p>
+                <h3>4. Kasvata autoriteeti - niin inimeste kui masinate jaoks[cite: 1]</h3>
+                <p>ChatGPT ei tsiteeri anonüümseid blogisid ja lugusid.[cite: 1] Ta tsiteerib nimesid, brände ja väljaandeid, mida ta on "näinud" mitmetes kohtades korraga.[cite: 1] See on digitaalne maine, mida ei saa osta.[cite: 1] Seda saab ainult üles ehitada ja kasvatada.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
-                    <li>Registreeru Bing Webmaster Tools'is ja esita sitemap.</li>
-                    <li>Kontrolli, et Bingil pole su saidi indekseerimisega probleeme.</li>
-                    <li>Lisa Bingile oma äri ka Bing Places for Business kaudu (eriti oluline lokaalsele ärile).</li>
+                    <li>Kirjuta külalisartikleid väljaannetesse, kus su sihtrühm tihti käib.[cite: 1]</li>
+                    <li>Lase end intervjueerida podcastides, YouTube'i kanalites, artiklites — kõik transkriptid indekseeritakse.[cite: 1]</li>
+                    <li>Taga, et su autorilehel on pärisnimi, foto, lühike bio ja lingid sotsiaalmeediasse.[cite: 1]</li>
+                    <li>Lisa artiklitele autor (pärisnimi, mitte "toimetaja" ega "admin").[cite: 1]</li>
+                </ul>
+                <p>Gemini ja Google AI Overviews on E-E-A-T suhtes eriti tundlikud — "kogemus" on Google'i jaoks oluline signaal, et sisu kirjutas keegi, kes päriselt valdkonnast midagi teab.[cite: 1]</p>
+
+                <h3>5. Hangi linke autoriteetsetelt lehtedelt (eriti Perplexity jaoks)[cite: 1]</h3>
+                <p>Perplexity töötab otse reaalajas — ta leiab sinu lehe, loeb seda ja otsustab, kas tsiteerida või mitte.[cite: 1] Aga ta eelistab alati neid lehti, millel on juba autoriteet.[cite: 1] Autoriteet tuleb sissetulevate linkide kvaliteedist ja hulgast.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
+                <ul>
+                    <li>Loo "linkimisväärset" sisu — andmete kokkuvõtted, originaaluuringud, praktilised tööriistad, checklistid (just nagu see artikkel).[cite: 1]</li>
+                    <li>Tee koostöös teiste valdkonna ekspertidega artikleid — nad ise jagavad seda lugu, mis toob linke.[cite: 1]</li>
+                    <li>Lisa end valdkonna ressursside nimekirjadesse ja kataloogidesse.[cite: 1]</li>
+                    <li>Proovi saada tsiteeritud autoriteetsetes meediaartiklites.[cite: 1]</li>
+                </ul>
+                <p>Perplexity jaoks on oluline ka lehe laadimiskiirus ja mobiilisõbralikkus — kui robot ei suuda lehte kiiresti läbi lugeda, jäetakse see vahele.[cite: 1] Kiirus iseenesest on oluline kõikide puhul, aga Perplexity hindab seda eriti kõrgelt.[cite: 1]</p>
+
+                <h3>6. Optimeeri ChatGPT jaoks spetsiifiliselt - mainimine, mitte ainult positsioon[cite: 1]</h3>
+                <p>ChatGPT ei kasuta reaalajas indeksit (välja arvatud live otsimisel).[cite: 1] Ta põhineb koolitusandmetele ja Bingi otsingule.[cite: 1] See tähendab, et klassikaline SEO-positsioon pole piisav — oluline on, et su bränd esineks paljudes kohtades tekstiliselt.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
+                <ul>
+                    <li>Taga see, et su ettevõtte nimi, tooted ja teenused on mainitud usaldusväärsetel saitidel (Wikipedia, sinu eriala kataloogid, usaldusväärsed blogid).[cite: 1]</li>
+                    <li>Kirjuta selges ja arusaadavas keeles — keeruline metafoor on igati vahva, aga jääb AI-l sageli tõlkimata.[cite: 1]</li>
+                    <li>Kasuta konkreetseid arve, fakte ja andmeid — need on tsiteerimise magnetid.[cite: 1]</li>
+                    <li>Loo oma brändi "definitsioon" — selge ühelauseline selgitus, mida sa teed ja kellele.[cite: 1]</li>
                 </ul>
 
-                <h3>8. Uuenda sisu regulaarselt - ja anna sellest märku</h3>
-                <p>AI-d, eriti need, mis kasutavad reaalajas andmeid, eelistavad värsket sisu. Google AI Overviews märkab dateModified välja ja eelistab hiljuti uuendatud lehti.</p>
-                <p><strong>Mida teha:</strong></p>
+                <h3>7. Bing'is nähtavus = Copilot'is nähtavus[cite: 1]</h3>
+                <p>Microsoft Copilot kasutab Bingi indeksit.[cite: 1] Kui su sait pole Bingis indekseeritud, pole sa Copilotis olemas.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
-                    <li>Uuenda vanu artikleid vähemalt kord aastas — lisa uusi andmeid, uuenda soovitusi.</li>
-                    <li>Too välja selgelt "Uuendatud: [kuupäev]".</li>
-                    <li>Lisa Schema-märgistusse dateModified väli.</li>
+                    <li>Registreeru Bing Webmaster Tools'is ja esita sitemap.[cite: 1]</li>
+                    <li>Kontrolli, et Bingil pole su saidi indekseerimisega probleeme.[cite: 1]</li>
+                    <li>Lisa Bingile oma äri ka Bing Places for Business kaudu (eriti oluline lokaalsele ärile).[cite: 1]</li>
                 </ul>
-                <p>Sisu, mis on kirjutatud 2021 ja on peale seda puutumata, ei ole AI-le atraktiivne.</p>
 
-                <h2>Platvormi-spetsiifiline kokkuvõte ühes tabelis</h2>
+                <h3>8. Uuenda sisu regulaarselt - ja anna sellest märku[cite: 1]</h3>
+                <p>AI-d, eriti need, mis kasutavad reaalajas andmeid, eelistavad värsket sisu.[cite: 1] Google AI Overviews märkab dateModified välja ja eelistab hiljuti uuendatud lehti.[cite: 1]</p>
+                <p><strong>Mida teha:</strong>[cite: 1]</p>
+                <ul>
+                    <li>Uuenda vanu artikleid vähemalt kord aastas — lisa uusi andmeid, uuenda soovitusi.[cite: 1]</li>
+                    <li>Too välja selgelt "Uuendatud: [kuupäev]".[cite: 1]</li>
+                    <li>Lisa Schema-märgistusse dateModified väli.[cite: 1]</li>
+                </ul>
+                <p>Sisu, mis on kirjutatud 2021 ja on peale seda puutumata, ei ole AI-le atraktiivne.[cite: 1]</p>
+
+                <h2>Platvormi-spetsiifiline kokkuvõte ühes tabelis[cite: 1]</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Platvorm</th>
-                            <th>Peamine loogika</th>
-                            <th>Sinu tähtsaim samm</th>
+                            <th>Platvorm[cite: 1]</th>
+                            <th>Peamine loogika[cite: 1]</th>
+                            <th>Sinu tähtsaim samm[cite: 1]</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>ChatGPT</strong></td>
-                            <td>Koolitusandmed + Bing otsing</td>
-                            <td>Mainimine paljudel usaldusväärsetel lehtedel</td>
+                            <td><strong>ChatGPT</strong>[cite: 1]</td>
+                            <td>Koolitusandmed + Bing otsing[cite: 1]</td>
+                            <td>Mainimine paljudel usaldusväärsetel lehtedel[cite: 1]</td>
                         </tr>
                         <tr>
-                            <td><strong>Perplexity</strong></td>
-                            <td>Reaalajas indeks + linkide autoriteet</td>
-                            <td>Kvaliteetsed tagasilingid + kiire laadimine</td>
+                            <td><strong>Perplexity</strong>[cite: 1]</td>
+                            <td>Reaalajas indeks + linkide autoriteet[cite: 1]</td>
+                            <td>Kvaliteetsed tagasilingid + kiire laadimine[cite: 1]</td>
                         </tr>
                         <tr>
-                            <td><strong>Google AI Overviews</strong></td>
-                            <td>Google'i indeks + E-E-A-T</td>
-                            <td>Autor selge, Schema markup, värske sisu</td>
+                            <td><strong>Google AI Overviews</strong>[cite: 1]</td>
+                            <td>Google'i indeks + E-E-A-T[cite: 1]</td>
+                            <td>Autor selge, Schema markup, värske sisu[cite: 1]</td>
                         </tr>
                         <tr>
-                            <td><strong>Gemini</strong></td>
-                            <td>Google'i ökosüsteem</td>
-                            <td>Sama mis Google Overviews + Google Business Profile</td>
+                            <td><strong>Gemini</strong>[cite: 1]</td>
+                            <td>Google'i ökosüsteem[cite: 1]</td>
+                            <td>Sama mis Google Overviews + Google Business Profile[cite: 1]</td>
                         </tr>
                         <tr>
-                            <td><strong>Bing Copilot</strong></td>
-                            <td>Bingi indeks</td>
-                            <td>Bing Webmaster Tools + indekseerimine</td>
+                            <td><strong>Bing Copilot</strong>[cite: 1]</td>
+                            <td>Bingi indeks[cite: 1]</td>
+                            <td>Bing Webmaster Tools + indekseerimine[cite: 1]</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <img src="../assets/AI_platvormide_võrdlustabel.webp" alt="Kokkuvõtlik võrdlustabel peamiste tehisintellekti otsingumootorite ja vestlusrobotite GEO strateegiatest ja optimeerimise sammudest" loading="lazy">
 
-                <h2>Mida see kõik tegelikult tähendab</h2>
-                <p>AI otsing ei ole SEO surm. See on SEO edasiarendus — koos mõne uue reegli ja ühe vana reegli tugevnemisega: <strong>kirjuta inimestele, mitte robotitele, aga struktureeri nii, et ka robot saaks su mõttest aru.</strong></p>
-                <p>Nimekirju ja checkliste tsiteeritakse AI poolt rohkem kui vabalt voolavaid esseesid. Fakte tsiteeritakse rohkem kui arvamusi. Konkreetseid vastuseid tsiteeritakse rohkem kui üldistusi.</p>
-                <p>Ja kõige lõpuks. Mäletad? See klient, kes minult küsis, miks ChatGPT teda ei maini. Me alustasimegi sellest, et kirjutasime ühe põhjaliku vastuse ühele konkreetsele küsimusele, mida tema valdkonnas enim küsitakse. Paari kuuga ilmus ta Perplexity vastustesse. ChatGPT-l läks veidi kauem aega. Ja seal ta oli. Mainitud ChatGPT poolt.</p>
+                <h2>Mida see kõik tegelikult tähendab[cite: 1]</h2>
+                <p>AI otsing ei ole SEO surm.[cite: 1] See on SEO edasiarendus — koos mõne uue reegli ja ühe vana reegli tugevnemisega: <strong>kirjuta inimestele, mitte robotitele, aga struktureeri nii, et ka robot saaks su mõttest aru.[cite: 1]</strong></p>
+                <p>Nimekirju ja checkliste tsiteeritakse AI poolt rohkem kui vabalt voolavaid esseesid.[cite: 1] Fakte tsiteeritakse rohkem kui arvamusi.[cite: 1] Konkreetseid vastuseid tsiteeritakse rohkem kui üldistusi.[cite: 1]</p>
+                <p>Ja kõige lõpuks.[cite: 1] Mäletad?[cite: 1] See klient, kes minult küsis, miks ChatGPT teda ei maini.[cite: 1] Me alustasimegi sellest, et kirjutasime ühe põhjaliku vastuse ühele konkreetsele küsimusele, mida tema valdkonnas enim küsitakse.[cite: 1] Paari kuuga ilmus ta Perplexity vastustesse.[cite: 1] ChatGPT-l läks veidi kauem aega.[cite: 1] Ja seal ta oli.[cite: 1] Mainitud ChatGPT poolt.[cite: 1]</p>
 
                 <p style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
-                    <em>Kui tahad teada, kuidas AI-nähtavust mõõta ja parandada, kirjuta mulle — selleks on olemas oma protsess, mida jälgida.</em>
+                    <em>Kui tahad teada, kuidas AI-nähtavust mõõta ja parandada, kirjuta mulle — selleks on olemas oma protsess, mida jälgida.[cite: 1]</em>
                 </p>
                 
                 <p style="border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
-                    <strong>Feliks Stavitski</strong> on digitaalturunduse konsultant ja AINO termini looja. Ta kirjutab AI nähtavuse optimeerimisest, turundusest ja Eesti e-kaubandusest.
+                    <strong>Feliks Stavitski</strong> on digitaalturunduse konsultant ja AINO termini looja. Ta kirjutab AI nähtavuse optimeerimisest, turundusest ja Eesti e-kaubandusest.[cite: 1]
                 </p>
             </div>
         </article>
