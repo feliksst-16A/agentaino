@@ -9,14 +9,30 @@
     <!-- 1. GOOGLE SEARCH CONSOLE KINNITUS -->
     <meta name="google-site-verification" content="PANE_SINU_GOOGLE_SEARCH_CONSOLE_KOOD_SIIN" />
 
-    <!-- 2. REAALNE GOOGLE ANALYTICS (gtag.js) TRACKING KOOD -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X"></script>
+    <!-- 2. DÜNAAMILINE GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      // 1. KONTROLL: Kas kasutaja tuli salajase lingiga?
+      if (window.location.search.includes('admin=true')) {
+          localStorage.setItem('peida_minu_liiklus', 'true');
+          alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
+      }
 
-      gtag('config', 'G-1CKNGQQE0X');
+      // 2. KONTROLL: Kas brauseri mälus on välistamise märge olemas?
+      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
+          // Kui märget EI OLE (tavaline külastaja), siis laeme Google Analyticsi
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+          document.head.appendChild(gaScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1CKNGQQE0X');
+      } else {
+          // Kui märge ON olemas (Sina), siis konsooli jäetakse teade ja GA-d ei laeta
+          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+      }
     </script>
 
     <!-- SEO & GEO Meta Tags -->
@@ -149,7 +165,7 @@
             </div>
         </section>
 
-        <!-- Blogi Sektsioon (3 tulpa) -->
+        <!-- Blogi Sektsioon -->
         <section id="blogi" class="blog-section">
             <div class="container">
                 <h2>Viimased artiklid</h2>
@@ -163,7 +179,7 @@
                         <a href="blogi/mis-on-aino.html" class="read-more">Loe edasi &rarr;</a>
                     </article>
 
-                    <!-- Artikkel 2 (Uus reaalne blogipostitus) -->
+                    <!-- Artikkel 2 -->
                     <article class="blog-card">
                         <span class="blog-date">1. juuni 2026</span>
                         <h3><a href="blogi/ai-vastustesse-checklist.html">Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist</a></h3>
