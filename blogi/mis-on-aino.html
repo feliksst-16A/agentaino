@@ -9,14 +9,39 @@
     <link rel="canonical" href="https://agentaino.ee/blogi/mis-on-aino.html">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://agentaino.ee/blogi/mis-on-aino.html">
     <meta property="og:title" content="Mis on AINO? AI Nähtavuse Optimeerimise juhend">
     <meta property="og:description" content="Kuidas tagada, et kui kliendid küsivad tehisintellektilt sinu valdkonna kohta, räägiks AI sinust, mitte konkurendist.">
     <meta property="og:image" content="https://agentaino.ee/assets/AINO_vs_SEO.webp">
 
+    <!-- Stiilifail -->
     <link rel="stylesheet" href="../style.css">
 
+    <!-- DÜNAAMILINE GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <script>
+      if (window.location.search.includes('admin=true')) {
+          localStorage.setItem('peida_minu_liiklus', 'true');
+          alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
+      }
+
+      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+          document.head.appendChild(gaScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1CKNGQQE0X');
+      } else {
+          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+      }
+    </script>
+
+    <!-- GEO / SEO Kombineeritud JSON-LD Struktureeritud andmed -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,7 +90,7 @@
               "name": "Mis vahe on AINO-l ja SEO-l?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "SEO optimeerib nähtavust otsingumootorite tulemuslehel. AINO optimeerib nähtavust AI-genereeritud vastustes. Mõlemad on olulised, aga nende loogika, mõõdikud ja meetodid erinevad."
+                "text": "SEO optimeerib nähtavust otsingumootorite tulemuslehel. AINO optimeerib nähtavust AI-genereeritud vastustes. Mõlemad on olulised, aga niiden loogika, mõõdikud ja meetodid erinevad."
               }
             }
           ]
@@ -76,6 +101,7 @@
 </head>
 <body>
 
+    <!-- Päis -->
     <header class="site-header">
         <div class="container header-container">
             <a href="../index.html" class="logo">Agent<span>AINO</span></a>
@@ -95,6 +121,7 @@
         </div>
     </header>
 
+    <!-- Artikli põhiosa -->
     <main class="container article-layout">
         <article>
             <header class="article-header">
@@ -108,11 +135,11 @@
                 <h2>Definitsioon</h2>
                 <p><strong>AINO</strong> (lühend: <strong>AI Nähtavuse Optimeerimine</strong>) on digitaalse turunduse distsipliin, mille eesmärk on tagada, et ettevõtte bränd, tooted, teenused ja sisu ilmuksid nähtavalt tehisintellekti-põhiste otsingumootorite ja vestlusrobotite vastustes - sealhulgas ChatGPT-s, Perplexity's, Google AI Overviews-is, Google otsingus, Claude'is ja teistes LLM-põhistes platvormides.</p>
                 <p>Lihtsamalt öeldes: kui inimene küsib AI-lt midagi, mis puudutab sinu valdkonda, siis AINO tagab, et AI räägib sinust - mitte sinu konkurendist.</p>
-                <p>AINO ei asenda SEO-d. See on SEO loogiline jätk maailmas, waar otsingu tulemuste lehe (SERP) asemel loeb otsingu vastuse sisu.</p>
+                <p>AINO ei asenda SEO-d. See on SEO loogiline jätk maailmas, kus otsingu tulemuste lehe (SERP) asemel loeb otsingu vastuse sisu.</p>
 
                 <h2>Kust see termin tuli?</h2>
                 <p>AINO termini võtsin kasutusele mina - <strong>Feliks Stavitski</strong> - 2026. aastal, kui sai selgeks, et ingliskeelne GEO (Generative Engine Optimization) ei kirjeldanud eesti keeles täpselt seda, millist tegevust antud protsess kirjeldab.</p>
-                <p>GEO räägib generatiivsetest mootoritest üldiselt. AEO (Answer Engine Optimization) räägib vastustest. SGE (Search Generative Experience) oli Google'i ajutine termin oma AI Overviews-i funktsionaalsuse jaoks. Kõik need on kattuvad, ja need on kaikki õiged - aga ükski ei kirjeldanud seda tervikut, mida Eesti ettevõtja tegelikult vajab mõistmiseks: kuidas mind AI silmis nähtavaks teha?</p>
+                <p>GEO räägib generatiivsetest mootoritest üldiselt. AEO (Answer Engine Optimization) räägib vastustest. SGE (Search Generative Experience) oli Google'i ajutine termin oma AI Overviews-i funktsionaalsuse jaoks. Kõik need on kattuvad, ja need on kõik õiged - aga ükski ei kirjeldanud seda tervikut, mida Eesti ettevõtja tegelikult vajab mõistmiseks: kuidas mind AI silmis nähtavaks teha?</p>
                 <p>AINO on eestikeelne termin eestikeelsele turule. See ei ole tõlge - see on kontseptuaalne valik: AI Nähtavuse Optimeerimine ütleb täpselt, mida ta tähendab.</p>
 
                 <h2>Miks see just praegu oluline on?</h2>
@@ -175,7 +202,7 @@
                 <img src="../assets/AINO_vs_SEO.webp" alt="Klassikalise otsingumootorile optimeerimise (SEO) ja uue põlvkonna AI optimeerimise (AINO) peamised strateegilised erinevused" loading="lazy">
 
                 <h2>Segadust tekitavad terminid - mis on mis?</h2>
-                <p>Valdkonnas on praegu palju termineid ringluses ja need kattuvad osaliselt. Siin on selgitus, kuidas need erinevad:</p>
+                <p>Valdkonnas on praegu palju termineid ringluses ja need kattuvad osaliselt. Sion on selgitus, kuidas need erinevad:</p>
                 <ul>
                     <li><strong>GEO - Generative Engine Optimization:</strong> Ingliskeelne termin, mis hõlmab kõike, mis puudutab optimeerimist generatiivsete AI-mootorite jaoks. AINO on GEO eestikeelne, täpsustatud versioon.</li>
                     <li><strong>AEO - Answer Engine Optimization:</strong> Rõhutab vastusemootorite aspekti - ehk et inimesed kasutavad AI-d nagu vastusemasinat, mitte otsingumootorit. AEO on AINO alam ehk üks vaatenurk samast probleemist.</li>
@@ -208,7 +235,7 @@
                 <h2>Korduma kippuvad küsimused (FAQ)</h2>
                 <div class="faq-section">
                     <h3>Mis on AINO?</h3>
-                    <p>AINO ehk AI Nähtavuse Optimeerimine on digitaalse turunduse distsipliin, mille eesmärk on muuta ettevõte nähtavaks tehisintellekti-põhisted platvormide - nagu ChatGPT, Perplexity, Google AI Overviews ja Claude - genereeritud vastustes.</p>
+                    <p>AINO ehk AI Nähtavuse Optimeerimine on digitaalse turunduse distsipliin, mille eesmärk on muuta ettevõte nähtavaks tehisintellekti-põhiste platvormide - nagu ChatGPT, Perplexity, Google AI Overviews ja Claude - genereeritud vastustes.</p>
                     
                     <h3>Kes lõi termini AINO?</h3>
                     <p>Termini AINO võttis kasutusele Feliks Stavitski 2026. aastal, et kirjeldada AI nähtavuse optimeerimist eestikeelses turunduskontekstis. Ingliskeelne vaste on GEO (Generative Engine Optimization).</p>
@@ -232,14 +259,14 @@
                     <p>Peamised mõõdikud on: brändi mainimiste sagedus AI vastustes, viidatud allikaks olemine, otsene liiklus AI-platvormidelt ja see, milliseid väiteid AI sinu brändi kohta teeb. Valdkonna standardiseeritud mõõdikud on alles välja kujunemas.</p>
                     
                     <h3>Kui kaua läheb, enne kui AINO tulemusi annab?</h3>
-                    <p>Sarnaselt SEO-le pole AINO kiirturundus. Arvestada võib 3–6 kuuga, enne kui struktureeritud sisust tulevad selgelt mõõdetavad tulemused AI nähtavuses. Mõned sammud - nagu brändi definitsioon ja KKK-plokid - võivad anda tulemusi kiiremini.</p>
+                    <p>Sarnaselt SEO-le pole AINO kiirturundus. Arvestada võib 3–6 kuuga, enne kui struktureeritud sisust tulevad selgelt mõõdetavad tulemused AI nähtavuses. Mõned sammud - nagu brändi definitsioon ja KKK-plokid - võivad donner tulemusi kiiremini.</p>
                     
                     <h3>Kas väike ettevõte saab ka AINO-ga midagi saavutada?</h3>
                     <p>Jah. AINO on skaleeruv. Väike ettevõte võib alustada kolmest asjast: selge definitsioon oma lehel, KKK-plokk põhiteemade juurde ja regulaarne sisu avaldamine. See on rohkem aja kui raha küsimus.</p>
                 </div>
 
                 <h2>Kokkuvõte</h2>
-                <p>AINO ei osutu moeröögatuseks ega järjekordseks turundusterminiks, mis aasta pärast unustusse vajub. See on vastus reaalsele nihkele selles, kuidas inimesed infot otsivad ja levaid.</p>
+                <p>AINO ei osutu moeröögatuseks ega järjekordseks turundusterminiks, mis aasta pärast unustusse vajub. See on vastus reaalsele nihkele selles, kuidas inimesed infot otsivad ja leiavad.</p>
                 <p>Kui sinu bränd ei ole AI vastustes esindatud, siis AI silmis ei ole sind olemas.</p>
                 <p>See on sõge olukord sellise väiksema turu jaoks nagu Eesti oma. Aga see on ka võimalus: paljud ei tea veel, et probleem olemas on. Kes esimesena mängu astub, võidab märgatava eelise.</p>
                 <p>AINO algab selgusest. Sellest, et su enda veebileht annab teada, kes sa oled, mida sa teed ja miks see oluline on - ning ütleb seda nii selgelt, et masin saab seda inimesele edasi rääkida.</p>
@@ -251,6 +278,7 @@
         </article>
     </main>
 
+    <!-- Jalus -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-left">
