@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Avaleht -->
    <url>
       <loc>https://agentaino.ee/</loc>
-      <lastmod>2026-05-31</lastmod>
+      <lastmod>2026-06-01</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    
+   <!-- Artikkel: Mis on AINO? AI Nähtavuse Optimeerimise juhend -->
    <url>
       <loc>https://agentaino.ee/blogi/mis-on-aino.html</loc>
       <lastmod>2026-05-31</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Artikkel: Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist -->
+   <url>
+      <loc>https://agentaino.ee/blogi/ai-vastustesse-checklist.html</loc>
+      <lastmod>2026-06-01</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
