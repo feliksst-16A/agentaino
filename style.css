@@ -238,7 +238,7 @@ input:focus, textarea:focus {
 .about-image img { max-width: 100%; height: auto; border-radius: 6px; filter: grayscale(100%); transition: filter 0.3s; }
 .about-image img:hover { filter: grayscale(0%); }
 
-/* Tunnustuste ja sertifikaatide sektsioon (Uuendatud: 50% väiksem ja alati vasakul) */
+/* Tunnustuste ja sertifikaatide sektsioon (Uuendatud: suuremad ja loetavamad pildid) */
 .certificates-section {
     padding: 90px 0;
     background-color: #fafafa;
@@ -255,12 +255,12 @@ input:focus, textarea:focus {
 .certificates-grid a {
     display: block;
     background: #ffffff;
-    padding: 16px;
+    padding: 20px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    max-width: 140px; /* Täpselt 50% väiksem soliidne disain */
+    max-width: 240px; /* Suurendatud suurus loetavuse tagamiseks */
     text-align: center;
 }
 .certificates-grid a:hover {
@@ -319,9 +319,7 @@ input:focus, textarea:focus {
     .about-container, .contact-container, .footer-container { flex-direction: column; gap: 32px; text-align: center; }
     
     /* Aktiveerime funktsionaalse Burger-menüü */
-    .menu-toggle {
-        display: flex;
-    }
+    .menu-toggle { display: flex; }
     
     /* Muudame horisontaalse menüü rippmenüüks */
     .main-nav {
@@ -339,9 +337,7 @@ input:focus, textarea:focus {
         box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
     
-    .main-nav.active {
-        display: flex;
-    }
+    .main-nav.active { display: flex; }
     
     .main-nav a {
         margin-left: 0;
@@ -360,14 +356,14 @@ input:focus, textarea:focus {
     .media-logos { flex-wrap: wrap; justify-content: center; gap: 28px; }
     .media-logos img { max-height: 32px; }
     
-    /* Sertifikaadid mobiilis: jäävad väikseks ja joondatuks vasakule */
+    /* Sertifikaadid mobiilis: kohandatud suurus ja joondus vasakule */
     .certificates-grid {
         justify-content: flex-start;
         gap: 16px;
     }
     .certificates-grid a {
-        max-width: 120px;
-        padding: 12px;
+        max-width: 180px;
+        padding: 14px;
     }
     
     .blog-grid { grid-template-columns: 1fr; }
