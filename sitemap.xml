@@ -3,9 +3,17 @@
    <!-- Avaleht -->
    <url>
       <loc>https://agentaino.ee/</loc>
-      <lastmod>2026-06-01</lastmod>
+      <lastmod>2026-06-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+   </url>
+
+   <!-- Privaatsuspoliitika -->
+   <url>
+      <loc>https://agentaino.ee/privaatsuspoliitika.html</loc>
+      <lastmod>2026-06-02</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
    </url>
    
    <!-- Artikkel: Mis on AINO? AI Nähtavuse Optimeerimise juhend -->
