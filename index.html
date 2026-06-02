@@ -6,49 +6,62 @@
     <title>AgentAINO | Feliks Stavitski</title>
     <meta name="description" content="Kuidas mõjutada AI-d, et kliendid sind sealt leiaks. Feliks Stavitski aitab su ettevõttel teha end nähtavaks AI vastustes (AINO).">
     
+    <!-- 1. GOOGLE SEARCH CONSOLE KINNITUS -->
     <meta name="google-site-verification" content="PANE_SINU_GOOGLE_SEARCH_CONSOLE_KOOD_SIIN" />
 
+    <!-- 2. GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
-      // 1. KONTROLL: Kas kasutaja tuli salajase lingiga?
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
           alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
       }
 
-      // 2. KONTROLL: Kas brauseri mälus on välistamise märge olemas?
-      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
-          // Kui märget EI OLE (tavaline külastaja), siis laeme Google Analyticsi
-          var gaScript = document.createElement('script');
-          gaScript.async = true;
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
-          document.head.appendChild(gaScript);
+      function loadGoogleAnalytics() {
+          if (localStorage.getItem('peida_minu_liiklus') === 'true') {
+              console.log('Google Analytics on brauseri jaoks välja lülitatud (Admin).');
+              return;
+          }
+          if (localStorage.getItem('cookie_consent') === 'accepted') {
+              var gaScript = document.createElement('script');
+              gaScript.async = true;
+              gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+              document.head.appendChild(gaScript);
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-1CKNGQQE0X');
-      } else {
-          // Kui märge ON olemas (Sina), siis konsooli jäetakse teade ja GA-d ei laeta
-          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1CKNGQQE0X');
+              console.log('Google Analytics edukalt käivitatud nõusoleku alusel.');
+          }
+      }
+
+      // Käivita kohe, kui nõusolek on juba varem antud
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+          loadGoogleAnalytics();
       }
     </script>
 
+    <!-- SEO & GEO Meta Tags -->
     <link rel="canonical" href="https://agentaino.ee/">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agentaino.ee/">
     <meta property="og:title" content="AgentAINO | Kuidas mõjutada AI-d, et kliendid sind sealt leiaks">
     <meta property="og:description" content="Feliks Stavitski — 20 aastat internetiturundust ja SEO-d. Nüüd täielikult pühendunud AI Nähtavuse Optimeerimisele.">
     <meta property="og:image" content="https://agentaino.ee/assets/og-image.jpg">
 
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://agentaino.ee/">
     <meta property="twitter:title" content="AgentAINO | Kuidas mõjutada AI-d, et kliendid sind sealt leiaks">
     <meta property="twitter:description" content="Feliks Stavitski — AI Nähtavuse Optimeerimine (AINO).">
 
+    <!-- Stiilifail -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- AEO/GEO Struktureeritud andmed (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -61,7 +74,7 @@
       },
       "url": "https://agentaino.ee",
       "image": "https://agentaino.ee/assets/AgentAINO_Feliks%20Stavitski.webp",
-      "description": "Interneti turunduse ja SEO expert 20-aastase kogemusega, kes on keskendunud AI Nähtavuse Optimeerimisele (AINO).",
+      "description": "Interneti turunduse ja SEO ekspert 20-aastase kogemusega, kes on keskendunud AI Nähtavuse Optimeerimisele (AINO).",
       "sameAs": [
         "https://www.linkedin.com/in/feliksstavitski/"
       ]
@@ -70,10 +83,12 @@
 </head>
 <body>
 
+    <!-- Päis / Navigatsioon -->
     <header class="site-header">
         <div class="container header-container">
             <a href="#" class="logo">Agent<span>AINO</span></a>
             
+            <!-- Burger Menüü Nupp -->
             <button class="menu-toggle" aria-label="Ava menüü" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -90,6 +105,7 @@
     </header>
 
     <main>
+        <!-- Hero Sektsioon (Uudiskiri) -->
         <section class="hero-section">
             <div class="container hero-container">
                 <h1>Mis on AINO? <br><em>See on AI Nähtavuse Optimeerimine.</em></h1>
@@ -104,6 +120,7 @@
             </div>
         </section>
 
+        <!-- MEEDIA LOGORIBA -->
         <section class="media-section">
             <div class="container media-container">
                 <span class="media-title">Minu artiklid mujal:</span>
@@ -124,13 +141,14 @@
             </div>
         </section>
 
+        <!-- Minu lugu Sektsioon -->
         <section id="minu-lugu" class="about-section">
             <div class="container about-container">
                 <div class="about-text">
                     <h2>Minu lugu</h2>
                     <p>Mina olen Feliks Stavitski ja ma olen interneti turundusega tegelenud 20 aastat. Enamuse sellest ajast ka SEO-ga.</p>
                     <p>Minu lugu algas esimese Eesti online gamblingu portaali loomisega 20 aastat tagasi ja selle promomisega PPC kaudu veel enne Google tõusu.</p>
-                    <p>Nüüd aga keskendun täielikult AINO-le. See tähendab, et aitan su ettevõttel tehdä end nähtavaks AI vastustes.</p>
+                    <p>Nüüd aga keskendun täielikult AINO-le. See tähendab, et aitan su ettevõttel teha end nähtavaks AI vastustes.</p>
                 </div>
                 <div class="about-image">
                     <img src="assets/AgentAINO_Feliks%20Stavitski.webp" alt="Feliks Stavitski — AI nähtavuse optimeerimise (AINO) ja GEO ekspert, AgentAINO asutaja" loading="lazy">
@@ -138,6 +156,7 @@
             </div>
         </section>
 
+        <!-- TUNNUSTUSED JA SERTIFIKAADID -->
         <section id="tunnustused" class="certificates-section">
             <div class="container">
                 <h2>Tunnustused ja sertifikaadid</h2>
@@ -155,11 +174,13 @@
             </div>
         </section>
 
+        <!-- Blogi Sektsioon -->
         <section id="blogi" class="blog-section">
             <div class="container">
                 <h2>Viimased artiklid</h2>
                 <div class="blog-grid">
                     
+                    <!-- Artikkel 1 -->
                     <article class="blog-card">
                         <span class="blog-date">31. mai 2026</span>
                         <h3><a href="blogi/mis-on-aino.html">Mis on AINO? AI Nähtavuse Optimeerimise juhend.</a></h3>
@@ -167,6 +188,7 @@
                         <a href="blogi/mis-on-aino.html" class="read-more">Loe edasi &rarr;</a>
                     </article>
 
+                    <!-- Artikkel 2 -->
                     <article class="blog-card">
                         <span class="blog-date">1. juuni 2026</span>
                         <h3><a href="blogi/ai-vastustesse-checklist.html">Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist</a></h3>
@@ -174,6 +196,7 @@
                         <a href="blogi/ai-vastustesse-checklist.html" class="read-more">Loe edasi &rarr;</a>
                     </article>
 
+                    <!-- Artikkel 3 -->
                     <article class="blog-card">
                         <span class="blog-date">15. mai 2026</span>
                         <h3><a href="#">Kuidas kirjutada artikleid, mida AI tahab tsiteerida</a></h3>
@@ -185,6 +208,7 @@
             </div>
         </section>
 
+        <!-- Kontakt Sektsioon -->
         <section id="kontakt" class="contact-section">
             <div class="container contact-container">
                 <div class="contact-info">
@@ -214,10 +238,11 @@
         </section>
     </main>
 
+    <!-- Jalus -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-left">
-                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud.</p>
+                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud. | <a href="privaatsuspoliitika.html" style="color: var(--text-muted); text-decoration: underline;">Privaatsuspoliitika</a></p>
                 <p class="footer-contact">E-post: info@agentaino.ee | Tel: 56 86 76 60</p>
             </div>
             <div class="footer-right">
@@ -228,6 +253,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- KÜPSISTE NÕUSOLEKU BÄNNER (GDPR ja AKI poolt nõutud võrdsed nupud) -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-container">
+            <p>Kasutame Sinu veebikogemuse parandamiseks, liikluse analüüsimiseks ja reklaamide isikupärastamiseks küpsiseid. Klikkides "Nõustu kõigiga", annad loa kõigi küpsiste kasutamiseks. Saad oma eelistustega tutvuda ja nõusoleku tagasi võtta meie <a href="privaatsuspoliitika.html">privaatsuspoliitikas</a>.</p>
+            <div class="cookie-buttons">
+                <button id="decline-cookies" class="btn btn-secondary">Keeldu</button>
+                <button id="accept-cookies" class="btn">Nõustu kõigiga</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
