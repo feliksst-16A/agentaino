@@ -19,33 +19,37 @@
     <!-- Stiilifail -->
     <link rel="stylesheet" href="../style.css">
 
-    <!-- DÜNAAMILINE GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
-      // 1. KONTROLL: Kas kasutaja tuli salajase lingiga?
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
           alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
       }
 
-      // 2. KONTROLL: Kas brauseri mälus on välistamise märge olemas?
-      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
-          // Kui märget EI OLE (tavaline külastaja), siis laeme Google Analyticsi
-          var gaScript = document.createElement('script');
-          gaScript.async = true;
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
-          document.head.appendChild(gaScript);
+      function loadGoogleAnalytics() {
+          if (localStorage.getItem('peida_minu_liiklus') === 'true') {
+              console.log('Google Analytics on brauseri jaoks välja lülitatud (Admin).');
+              return;
+          }
+          if (localStorage.getItem('cookie_consent') === 'accepted') {
+              var gaScript = document.createElement('script');
+              gaScript.async = true;
+              gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+              document.head.appendChild(gaScript);
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-1CKNGQQE0X');
-      } else {
-          // Kui märge ON olemas (Sina), siis konsooli jäetakse teade ja GA-d ei laeta
-          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1CKNGQQE0X');
+          }
+      }
+
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+          loadGoogleAnalytics();
       }
     </script>
 
-    <!-- GEO / SEO Kombineeritud JSON-LD ) -->
+    <!-- GEO / SEO Kombineeritud JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -113,20 +117,20 @@
     <main class="container article-layout">
         <article>
             <header class="article-header">
-                <h1>Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist[cite: 1]</h1>
+                <h1>Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist</h1>
                 <p class="subtitle" style="font-size: 0.95rem; margin-bottom: 0;">
                     Avaldatud: <strong>2026</strong> | Autor: <strong>Feliks Stavitski</strong> | Viimati uuendatud: <strong>mai 2026</strong>[cite: 1]
                 </p>
             </header>
 
             <div class="article-content">
-                <p>Mul on klient, kes tegi kõike õigesti — SEO, linkide kogumine, sisukad artiklid blogis. Ja seetõttu jõudis see veebileht ka Google'i esilehele. Väga hea. Aga siis küsis ta minult ühe küsimuse, millele mul siis polnud vielä head vastust anda: <em>"Miks mind ChatGPT ei maini, kui keegi küsib just selle kohta, millest ma veebilehel räägin?"[cite: 1]</em></p>
-                <p>See on küsimus, mida kolm aastat tagasi poleks keegi küsinudki. Tänaseks on see muutunud küsimuseks, mis peaks iga turundusjuhi öörahu tugevalt häirima.[cite: 1]</p>
-                <p>Google'i otsingu klikimäär kukub. Perplexity vastab kohe otse. ChatGPT koostab kokkuvõtteid. Inimesed saavad vastused kätte ilma, et nad sinu veebilehele üldse jõuaksid ja (üllatuseks) on see parim stsenaarium. Halvim on lihtsalt see, et sinu brändi nimi ei tule seal üldse jutuks.[cite: 1]</p>
+                <p>Mul on klient, kes tegi kõike õigesti — SEO, linkide kogumine, sisukad artiklid blogis.[cite: 1] Ja seetõttu jõudis see veebileht ka Google'i esilehele.[cite: 1] Väga hea.[cite: 1] Aga siis küsis ta minult ühe küsimuse, millele mul siis polnud veel head vastust anda: <em>"Miks mind ChatGPT ei maini, kui keegi küsib just selle kohta, millest ma veebilehel räägin?"[cite: 1]</em></p>
+                <p>See on küsimus, mida kolm aastat tagasi poleks keegi küsinudki.[cite: 1] Tänaseks on see muutunud küsimuseks, mis peaks iga turundusjuhi öörahu tugevalt häirima.[cite: 1]</p>
+                <p>Google'i otsingu klikimäär kukub.[cite: 1] Perplexity vastab kohe otse.[cite: 1] ChatGPT koostab kokkuvõtteid.[cite: 1] Inimesed saavad vastused kätte ilma, et nad sinu veebilehele üldse jõuaksid ja (üllatuseks) on see parim stsenaarium.[cite: 1] Halvim on lihtsalt see, et sinu brändi nimi ei tule seal üldse jutuks.[cite: 1]</p>
                 <p>Siin on sulle praktiline checklist — platvormide kaupa, samm-sammult.[cite: 1]</p>
 
                 <h2>Miks eri platvormid käituvad erinevalt[cite: 1]</h2>
-                <p>Enne checklistini jõudmist on oluline mõista, et ChatGPT, Perplexity, Gemini ja Google AI Overview ei tee ühte ja sama asja. Neil on erinevad andmeallikad, erinevad loogikad ja seega erinevad reeglid selle kohta, keda, millal ja mida nad tsiteerivad.[cite: 1]</p>
+                <p>Enne checklistini jõudmist on oluline mõista, et ChatGPT, Perplexity, Gemini ja Google AI Overview ei tee ühte ja sama asja.[cite: 1] Neil on erinevad andmeallikad, erinevad loogikad ja seega erinevad reeglid selle kohta, keda, millal ja mida nad tsiteerivad.[cite: 1]</p>
                 <ul>
                     <li><strong>ChatGPT (OpenAI):</strong> kasutab koolitusandmetena peamiselt interneti sisu kuni teatud kuupäevani, pluss Bingi otsingut reaalajas.[cite: 1] See eelistab autoriteetseid, hästi struktureeritud allikaid.[cite: 1] Ei tsiteeri allikat alati otseselt, aga "mäletab" brände ja nimesid, mida on internetis korduvalt mainitud.[cite: 1]</li>
                     <li><strong>Perplexity:</strong> on sisuliselt otsingumootor, mis genereerib vastuse reaalajas leitud lehekülgedest.[cite: 1] Tsiteerib allikaid otseselt ja nähtavalt.[cite: 1] See tähendab, et siin on kõige otsesem seos "mu veebileht on allikas" ja "Perplexity mainib mind" vahel.[cite: 1]</li>
@@ -167,7 +171,7 @@
                     <li>Organization schema — kodulehele (koos nime, logo, kontakti ja sotsiaalmeedia linkidega).[cite: 1]</li>
                 </ul>
 
-                <h3>4. Kasvata autoriteeti - niin inimeste kui masinate jaoks[cite: 1]</h3>
+                <h3>4. Kasvata autoriteeti - nii inimeste kui masinate jaoks[cite: 1]</h3>
                 <p>ChatGPT ei tsiteeri anonüümseid blogisid ja lugusid.[cite: 1] Ta tsiteerib nimesid, brände ja väljaandeid, mida ta on "näinud" mitmetes kohtades korraga.[cite: 1] See on digitaalne maine, mida ei saa osta.[cite: 1] Seda saab ainult üles ehitada ja kasvatada.[cite: 1]</p>
                 <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
@@ -179,7 +183,7 @@
                 <p>Gemini ja Google AI Overviews on E-E-A-T suhtes eriti tundlikud — "kogemus" on Google'i jaoks oluline signaal, et sisu kirjutas keegi, kes päriselt valdkonnast midagi teab.[cite: 1]</p>
 
                 <h3>5. Hangi linke autoriteetsetelt lehtedelt (eriti Perplexity jaoks)[cite: 1]</h3>
-                <p>Perplexity töötab otse reaalajas — ta leiab sinu lehe, loeb seda ja otsustab, kas tsiteerida või mitte.[cite: 1] Aga ta eelistab alati neid lehti, millel on juba autoriteet.[cite: 1] Autoriteet tuleb sissetulevate linkide kvaliteedist ja hulgast.[cite: 1]</p>
+                <p>Perplexity töötag otse reaalajas — ta leiab sinu lehe, loeb seda ja otsustab, kas tsiteerida või mitte.[cite: 1] Aga ta eelistab alati neid lehti, millel on juba autoriteet.[cite: 1] Autoriteet tuleb sissetulevate linkide kvaliteedist ja hulgast.[cite: 1]</p>
                 <p><strong>Mida teha:</strong>[cite: 1]</p>
                 <ul>
                     <li>Loo "linkimisväärset" sisu — andmete kokkuvõtted, originaaluuringud, praktilised tööriistad, checklistid (just nagu see artikkel).[cite: 1]</li>
@@ -258,7 +262,7 @@
 
                 <img src="../assets/AI_platvormide_võrdlustabel.webp" alt="Kokkuvõtlik võrdlustabel peamiste tehisintellekti otsingumootorite ja vestlusrobotite GEO strateegiatest ja optimeerimise sammudest" loading="lazy">
 
-                <h2>Mida see kõik tegelikult tähendab[cite: 1]</h2>
+                <h2>Mida see kaikki tegelikult tähendab[cite: 1]</h2>
                 <p>AI otsing ei ole SEO surm.[cite: 1] See on SEO edasiarendus — koos mõne uue reegli ja ühe vana reegli tugevnemisega: <strong>kirjuta inimestele, mitte robotitele, aga struktureeri nii, et ka robot saaks su mõttest aru.[cite: 1]</strong></p>
                 <p>Nimekirju ja checkliste tsiteeritakse AI poolt rohkem kui vabalt voolavaid esseesid.[cite: 1] Fakte tsiteeritakse rohkem kui arvamusi.[cite: 1] Konkreetseid vastuseid tsiteeritakse rohkem kui üldistusi.[cite: 1]</p>
                 <p>Ja kõige lõpuks.[cite: 1] Mäletad?[cite: 1] See klient, kes minult küsis, miks ChatGPT teda ei maini.[cite: 1] Me alustasimegi sellest, et kirjutasime ühe põhjaliku vastuse ühele konkreetsele küsimusele, mida tema valdkonnas enim küsitakse.[cite: 1] Paari kuuga ilmus ta Perplexity vastustesse.[cite: 1] ChatGPT-l läks veidi kauem aega.[cite: 1] Ja seal ta oli.[cite: 1] Mainitud ChatGPT poolt.[cite: 1]</p>
@@ -278,7 +282,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-left">
-                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud.</p>
+                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud. | <a href="../privaatsuspoliitika.html" style="color: var(--text-muted); text-decoration: underline;">Privaatsuspoliitika</a></p>
                 <p class="footer-contact">E-post: info@agentaino.ee | Tel: 56 86 76 60</p>
             </div>
             <div class="footer-right">
@@ -289,6 +293,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- KÜPSISTE NÕUSOLEKU BÄNNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-container">
+            <p>Kasutame Sinu veebikogemuse parandamiseks, liikluse analüüsimiseks ja reklaamide isikupärastamiseks küpsiseid. Klikkides "Nõustu kõigiga", annad loa kõigi küpsiste kasutamiseks. Saad oma eelistustega tutvuda ja nõusoleku tagasi võtta meie <a href="../privaatsuspoliitika.html">privaatsuspoliitikas</a>.</p>
+            <div class="cookie-buttons">
+                <button id="decline-cookies" class="btn btn-secondary">Keeldu</button>
+                <button id="accept-cookies" class="btn">Nõustu kõigiga</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>
