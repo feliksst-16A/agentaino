@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobiilimenüü (Burger menu) funktsionaalsus
+    // 1. MOBIILIMENÜÜ (Burger Menu) funktsionaalsus
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-nav');
 
@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mainNav.classList.toggle('active');
         });
 
-        // Sulge menüü, kui klikitakse mõnel lingil (mugavam navigeerimine ühelehe veebis)
         mainNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.setAttribute('aria-expanded', 'false');
@@ -21,14 +20,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Uudiskirja vormi submit
+    // 2. KÜPSISTE BÄNNERI HALDUS (GDPR / AKI vastavus)
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+    const declineCookiesBtn = document.getElementById('decline-cookies');
+    const isLocalAdmin = localStorage.getItem('peida_minu_liiklus') === 'true';
+
+    // Kuvame bänneri ainult siis, kui valik on tegemata JA kasutaja pole admin
+    if (cookieBanner && !isLocalAdmin && !localStorage.getItem('cookie_consent')) {
+        setTimeout(() => {
+            cookieBanner.classList.add('show');
+        }, 800); // kerge viivitus parema UX jaoks
+    }
+
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent', 'accepted');
+            cookieBanner.classList.remove('show');
+            // Käivitame Google Analyticsi reaalajas
+            if (typeof loadGoogleAnalytics === 'function') {
+                loadGoogleAnalytics();
+            }
+        });
+    }
+
+    if (declineCookiesBtn) {
+        declineCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent', 'declined');
+            cookieBanner.classList.remove('show');
+            console.log('Küpsistest keeldutud. Google Analyticsit ei laeta.');
+        });
+    }
+
+    // 3. UUDISKIRJA VORMI SUBMIT
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const emailInput = newsletterForm.querySelector('input[type="email"]').value;
             
-            // Saada andmed taustal e-mailile info@agentaino.ee
             fetch("https://formsubmit.co/ajax/info@agentaino.ee", {
                 method: "POST",
                 headers: { 
@@ -53,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Kontaktivormi submit
+    // 4. KONTAKTIVORMI SUBMIT
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -62,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Saada andmed taustal e-mailile info@agentaino.ee
             fetch("https://formsubmit.co/ajax/info@agentaino.ee", {
                 method: "POST",
                 headers: { 
