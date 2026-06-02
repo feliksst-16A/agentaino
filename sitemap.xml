@@ -15,19 +15,27 @@
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
    </url>
-   
-   <!-- Artikkel: Mis on AINO? AI Nähtavuse Optimeerimise juhend -->
+
+   <!-- Artikkel: SEO on surnud? Ei - aga reeglid on muutunud -->
    <url>
-      <loc>https://agentaino.ee/blogi/mis-on-aino.html</loc>
-      <lastmod>2026-05-31</lastmod>
+      <loc>https://agentaino.ee/blogi/seo-on-surnud.html</loc>
+      <lastmod>2026-06-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-
+   
    <!-- Artikkel: Kuidas saada ChatGPT, Perplexity ja Google AI vastustesse - praktiline checklist -->
    <url>
       <loc>https://agentaino.ee/blogi/ai-vastustesse-checklist.html</loc>
       <lastmod>2026-06-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Artikkel: Mis on AINO? AI Nähtavuse Optimeerimise juhend -->
+   <url>
+      <loc>https://agentaino.ee/blogi/mis-on-aino.html</loc>
+      <lastmod>2026-05-31</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
