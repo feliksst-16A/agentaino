@@ -19,25 +19,33 @@
     <!-- Stiilifail -->
     <link rel="stylesheet" href="../style.css">
 
-    <!-- DÜNAAMILINE GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
           alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
       }
 
-      if (localStorage.getItem('peida_minu_liiklus') !== 'true') {
-          var gaScript = document.createElement('script');
-          gaScript.async = true;
-          gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
-          document.head.appendChild(gaScript);
+      function loadGoogleAnalytics() {
+          if (localStorage.getItem('peida_minu_liiklus') === 'true') {
+              console.log('Google Analytics on brauseri jaoks välja lülitatud (Admin).');
+              return;
+          }
+          if (localStorage.getItem('cookie_consent') === 'accepted') {
+              var gaScript = document.createElement('script');
+              gaScript.async = true;
+              gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+              document.head.appendChild(gaScript);
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-1CKNGQQE0X');
-      } else {
-          console.log('Google Analytics on selle brauseri jaoks välja lülitatud.');
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1CKNGQQE0X');
+          }
+      }
+
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+          loadGoogleAnalytics();
       }
     </script>
 
@@ -90,7 +98,7 @@
               "name": "Mis vahe on AINO-l ja SEO-l?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "SEO optimeerib nähtavust otsingumootorite tulemuslehel. AINO optimeerib nähtavust AI-genereeritud vastustes. Mõlemad on olulised, aga niiden loogika, mõõdikud ja meetodid erinevad."
+                "text": "SEO optimeerib nähtavust otsingumootorite tulemuslehel. AINO optimeerib nähtavust AI-genereeritud vastustes. Mõlemad on olulised, aga nende loogika, mõõdikud ja meetodid erinevad."
               }
             }
           ]
@@ -155,7 +163,7 @@
                 <h2>AINO vs SEO - mis on erinevus?</h2>
                 <p>Need kaks distsipliini ei ole vaenlased. AINO on osaliselt SEO peale ehitatud - hea SEO on AINO eeldus. Aga neil on selge erinevus selles, mida nad optimeerivad.</p>
                 <p>SEO optimeerib nähtavust otsingumootorite tulemuslehel (SERP). Eesmärk on jõuda esimesele lehele, esimesele positsioonile, featured snippet'iks.</p>
-                <p>AINO optimeerib nähtavust AI-genereeritud vastustes. Eesmärk on olla see allikas, millele AI viitab - või mille põhjal ta oma vastuse koostab, iseven ilma otsese viiteta.</p>
+                <p>AINO optimeerib nähtavust AI-genereeritud vastustes. Eesmärk on olla see allikas, millele AI viitab - või mille põhjal ta oma vastuse koostab, isegi ilma otsese viiteta.</p>
 
                 <table>
                     <thead>
@@ -202,7 +210,7 @@
                 <img src="../assets/AINO_vs_SEO.webp" alt="Klassikalise otsingumootorile optimeerimise (SEO) ja uue põlvkonna AI optimeerimise (AINO) peamised strateegilised erinevused" loading="lazy">
 
                 <h2>Segadust tekitavad terminid - mis on mis?</h2>
-                <p>Valdkonnas on praegu palju termineid ringluses ja need kattuvad osaliselt. Sion on selgitus, kuidas need erinevad:</p>
+                <p>Valdkonnas on praegu palju termineid ringluses ja need kattuvad osaliselt. Siin on selgitus, kuidas need erinevad:</p>
                 <ul>
                     <li><strong>GEO - Generative Engine Optimization:</strong> Ingliskeelne termin, mis hõlmab kõike, mis puudutab optimeerimist generatiivsete AI-mootorite jaoks. AINO on GEO eestikeelne, täpsustatud versioon.</li>
                     <li><strong>AEO - Answer Engine Optimization:</strong> Rõhutab vastusemootorite aspekti - ehk et inimesed kasutavad AI-d nagu vastusemasinat, mitte otsingumootorit. AEO on AINO alam ehk üks vaatenurk samast probleemist.</li>
@@ -224,7 +232,7 @@
 
                 <h2>Praktilised sammud: kuidas alustada AINO-ga</h2>
                 <p><strong>1. Loo definitsiooni samba sisu</strong><br>Iga valdkond vajab selget vastust küsimusele "mis on X?". Kui see vastus on sinu lehel olemas - struktureeritud, selge, FAQ-ga toetatud - on sul suur eelis.</p>
-                <p><strong>2. Ehita KKK-plokid igale põhiteemale</strong><br>AI armastab KKK-d. Kirjuta oma sisu juurde plokk, kus küsimused on täpselt sellised, nagu inimene neid AI-le esitaks. Mitte "meie teenused", vaid "mis vahe on X ja Y vahel?" ja "millal on mõistlik X-i kasutada?".</p>
+                <p><strong>2. Ehita KKK-plokid igale põhiteemale</strong><br>AI armastab KKK-d. Kirjuta oma sisu juurde plokk, kus küsimused on täpselt such, nagu inimene neid AI-le esitaks. Mitte "meie teenused", vaid "mis vahe on X ja Y vahel?" ja "millal on mõistlik X-i kasutada?".</p>
                 <p><strong>3. Tee oma bränd tsiteeritavaks</strong><br>Sõnasta oma positsioneerimise lause nii selgelt, et AI saab seda otse kasutada. <em>"Feliks Stavitski on AINO termini looja ja AI nähtavuse optimeerimise konsultant Eestis"</em> - see on tsiteeritav. "Me aitame teie äril kasvada" - ei ole.</p>
                 <p><strong>4. Hajuta oma sisu mitmele platvormile</strong><br>Oma veebileht on alus. Aga AINO vajab laiust: LinkedIn, uudiskirjad, viited teistes artiklites, mainimised teiste inimeste tekstides. Mida rohkem platvorme, seda tugevam signaal.</p>
                 <p><strong>5. Jälgi oma AI-nähtavust regulaarselt</strong><br>Küsi kord kuus ChatGPT-lt, Perplexity-lt ja Google'i AI Overviews-ilt küsimusi oma valdkonna kohta. Vaata, kas sinust räägitakse. Vaata, mida räägitakse. See on sinu AINO audit.</p>
@@ -259,7 +267,7 @@
                     <p>Peamised mõõdikud on: brändi mainimiste sagedus AI vastustes, viidatud allikaks olemine, otsene liiklus AI-platvormidelt ja see, milliseid väiteid AI sinu brändi kohta teeb. Valdkonna standardiseeritud mõõdikud on alles välja kujunemas.</p>
                     
                     <h3>Kui kaua läheb, enne kui AINO tulemusi annab?</h3>
-                    <p>Sarnaselt SEO-le pole AINO kiirturundus. Arvestada võib 3–6 kuuga, enne kui struktureeritud sisust tulevad selgelt mõõdetavad tulemused AI nähtavuses. Mõned sammud - nagu brändi definitsioon ja KKK-plokid - võivad donner tulemusi kiiremini.</p>
+                    <p>Sarnaselt SEO-le pole AINO kiirturundus. Arvestada võib 3–6 kuuga, enne kui struktureeritud sisust tulevad selgelt mõõdetavad tulemused AI nähtavuses. Mõned sammud - nagu brändi definitsioon ja KKK-plokid - võivad anda tulemusi kiiremini.</p>
                     
                     <h3>Kas väike ettevõte saab ka AINO-ga midagi saavutada?</h3>
                     <p>Jah. AINO on skaleeruv. Väike ettevõte võib alustada kolmest asjast: selge definitsioon oma lehel, KKK-plokk põhiteemade juurde ja regulaarne sisu avaldamine. See on rohkem aja kui raha küsimus.</p>
@@ -282,7 +290,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-left">
-                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud.</p>
+                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud. | <a href="../privaatsuspoliitika.html" style="color: var(--text-muted); text-decoration: underline;">Privaatsuspoliitika</a></p>
                 <p class="footer-contact">E-post: info@agentaino.ee | Tel: 56 86 76 60</p>
             </div>
             <div class="footer-right">
@@ -293,6 +301,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- KÜPSISTE NÕUSOLEKU BÄNNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-container">
+            <p>Kasutame Sinu veebikogemuse parandamiseks, liikluse analüüsimiseks ja reklaamide isikupärastamiseks küpsiseid. Klikkides "Nõustu kõigiga", annad loa kõigi küpsiste kasutamiseks. Saad oma eelistustega tutvuda ja nõusoleku tagasi võtta meie <a href="../privaatsuspoliitika.html">privaatsuspoliitikas</a>.</p>
+            <div class="cookie-buttons">
+                <button id="decline-cookies" class="btn btn-secondary">Keeldu</button>
+                <button id="accept-cookies" class="btn">Nõustu kõigiga</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../script.js"></script>
 </body>
