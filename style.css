@@ -106,7 +106,7 @@ em {
 
 .main-nav a:hover { color: var(--text-main); }
 
-/* Burger Menüü nupp */
+/* Burger Menüü nupp (Desktopis peidus) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -150,7 +150,7 @@ em {
     font-style: italic;
 }
 
-/* Tekstikastide uuendus */
+/* Tekstikastide kapitaalne uuendus */
 input[type="email"], input[type="text"], textarea {
     width: 100%;
     padding: 16px 20px;
@@ -236,8 +236,153 @@ input:focus, textarea:focus {
     opacity: 1;
 }
 
+/* TEENUSTE SEKTIUUNI STIILID */
+.services-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+}
+.section-lead {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+    max-width: 750px;
+}
+.services-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 64px;
+}
+.pillar-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+}
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+.pillar-card h3 {
+    font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+.pillar-card h3 span {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-weight: 400;
+    font-style: italic;
+}
+.pillar-card p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+.pillar-card ul, .core-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+.pillar-card li, .core-card li {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 16px;
+    line-height: 1.5;
+}
+.pillar-card li::before, .core-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Core-teenuste plokk */
+.core-services-block {
+    margin: 80px 0;
+    padding-top: 48px;
+    border-top: 1px solid var(--border-color);
+}
+.services-quote {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--text-main);
+    border-left: 3px solid var(--text-main);
+    padding-left: 24px;
+    margin: 32px 0;
+}
+.core-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+.core-card {
+    background: #fafafa;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.core-card h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.core-card li {
+    font-size: 0.95rem;
+}
+
+/* Paketid / Tabeli mahuti */
+.packages-block {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border-color);
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+    background: #ffffff;
+}
+th, td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    line-height: 1.5;
+}
+th {
+    background-color: #fafafa;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+
 /* Minu lugu Sektsioon */
-.about-section { padding: 90px 0; background: #ffffff; }
+.about-section { padding: 90px 0; background: #fafafa; }
 .about-container { display: flex; gap: 64px; align-items: center; }
 .about-text { flex: 1; }
 .about-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
@@ -250,7 +395,7 @@ input:focus, textarea:focus {
 /* Tunnustuste ja sertifikaatide sektsioon */
 .certificates-section {
     padding: 90px 0;
-    background-color: #fafafa;
+    background-color: #ffffff;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
@@ -283,9 +428,9 @@ input:focus, textarea:focus {
 }
 
 /* Blogi Grid */
-.blog-section { padding: 90px 0; }
+.blog-section { padding: 90px 0; background-color: #fafafa; border-top: 1px solid var(--border-color); }
 .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.blog-card { border: 1px solid var(--border-color); padding: 24px; border-radius: 6px; display: flex; flex-direction: column; }
+.blog-card { background: #ffffff; border: 1px solid var(--border-color); padding: 24px; border-radius: 6px; display: flex; flex-direction: column; }
 .blog-date { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
 .blog-card h3 a { text-decoration: none; color: var(--text-main); transition: color 0.2s; }
 .blog-card h3 a:hover { color: var(--accent); }
@@ -293,7 +438,7 @@ input:focus, textarea:focus {
 .read-more { text-decoration: none; color: var(--accent); font-size: 0.9rem; font-weight: 500; margin-top: 16px; }
 
 /* Kontakt */
-.contact-section { padding: 80px 0; border-top: 1px solid var(--border-color); }
+.contact-section { padding: 80px 0; border-top: 1px solid var(--border-color); background-color: #ffffff; }
 .contact-container { display: flex; gap: 64px; }
 .contact-info, .contact-form { flex: 1; }
 .social-links a { display: inline-block; margin-right: 16px; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 1.1rem; }
@@ -301,7 +446,7 @@ input:focus, textarea:focus {
 .form-group label { display: block; font-size: 0.9rem; margin-bottom: 8px; font-weight: 500; }
 
 /* Jalus */
-.site-footer { border-top: 1px solid var(--border-color); padding: 40px 0; font-size: 0.9rem; color: var(--text-muted); }
+.site-footer { border-top: 1px solid var(--border-color); padding: 40px 0; font-size: 0.9rem; color: var(--text-muted); background-color: #ffffff; }
 .footer-container { display: flex; justify-content: space-between; align-items: center; }
 .footer-contact { margin-top: 4px; }
 .certificates { text-align: right; }
@@ -317,12 +462,9 @@ input:focus, textarea:focus {
 .article-content li { margin-bottom: 10px; color: var(--text-main); font-size: 1.1rem; }
 
 .article-content img { max-width: 100%; height: auto; border-radius: 6px; margin: 32px 0; display: block; }
-.article-content table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 1rem; }
-.article-content th, .article-content td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border-color); }
-.article-content th { background-color: #fafafa; font-weight: 600; color: var(--text-main); }
 .faq-section { background-color: #fafafa; padding: 24px; border-radius: 6px; margin: 32px 0; }
 
-/* UUS: Küpsiste bänneri modernne, õhuline disain (Fikseeritud riba all) */
+/* Küpsiste bänner */
 .cookie-banner {
     position: fixed;
     bottom: -100%;
@@ -336,38 +478,19 @@ input:focus, textarea:focus {
     padding: 24px 0;
     transition: bottom 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.cookie-banner.show {
-    bottom: 0;
-}
-.cookie-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-.cookie-container p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
-    color: var(--text-muted);
-    max-width: 720px;
-    line-height: 1.5;
-}
-.cookie-container p a {
-    color: var(--text-main);
-    text-decoration: underline;
-    font-weight: 500;
-}
-.cookie-buttons {
-    display: flex;
-    gap: 12px;
-    white-space: nowrap;
-}
-.cookie-buttons .btn {
-    padding: 12px 24px;
-    font-size: 0.95rem;
+.cookie-banner.show { bottom: 0; }
+.cookie-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.cookie-container p { font-size: 0.9rem; margin-bottom: 0; color: var(--text-muted); max-width: 720px; line-height: 1.5; }
+.cookie-container p a { color: var(--text-main); text-decoration: underline; font-weight: 500; }
+.cookie-buttons { display: flex; gap: 12px; white-space: nowrap; }
+.cookie-buttons .btn { padding: 12px 24px; font-size: 0.95rem; }
+
+/* Mobiilne kohanduvus (Responsive) */
+@media (max-width: 992px) {
+    .services-pillars { grid-template-columns: 1fr; gap: 24px; }
+    .core-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
-/* Mobiilne kohanduvus */
 @media (max-width: 768px) {
     h1 { font-size: 2.3rem; }
     .about-container, .contact-container, .footer-container { flex-direction: column; gap: 32px; text-align: center; }
@@ -390,14 +513,7 @@ input:focus, textarea:focus {
     }
     
     .main-nav.active { display: flex; }
-    
-    .main-nav a {
-        margin-left: 0;
-        font-size: 1.1rem;
-        width: 100%;
-        text-align: left;
-        padding: 6px 0;
-    }
+    .main-nav a { margin-left: 0; font-size: 1.1rem; width: 100%; text-align: left; padding: 6px 0; }
     
     .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
@@ -413,9 +529,9 @@ input:focus, textarea:focus {
     .blog-grid { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
     .certificates { text-align: center; }
-    .article-content table { display: block; overflow-x: auto; }
     
-    /* Küpsiste bänneri mobiili paigutus */
+    .table-container { display: block; overflow-x: auto; }
+    
     .cookie-container { flex-direction: column; gap: 20px; text-align: left; }
     .cookie-buttons { width: 100%; }
     .cookie-buttons .btn { flex: 1; text-align: center; }
