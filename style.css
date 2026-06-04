@@ -236,7 +236,7 @@ input:focus, textarea:focus {
     opacity: 1;
 }
 
-/* TEENUSTE SEKTIUUNI STIILID */
+/* TEENUSTE SEKTIUUNI STIILID (Uuendatud paigutus 1fr ja 2fr suhte jaoks) */
 .services-section {
     padding: 90px 0;
     background-color: #ffffff;
@@ -249,7 +249,7 @@ input:focus, textarea:focus {
 }
 .services-pillars {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr; /* SEO tulp 1/3 ja AINO tulp 2/3 laiust */
     gap: 32px;
     margin-bottom: 64px;
 }
@@ -487,7 +487,7 @@ tr:last-child td {
 
 /* Mobiilne kohanduvus (Responsive) */
 @media (max-width: 992px) {
-    .services-pillars { grid-template-columns: 1fr; gap: 24px; }
+    .services-pillars { grid-template-columns: 1fr; gap: 24px; } /* Mobiilis tagasi ühte tulpa */
     .core-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
