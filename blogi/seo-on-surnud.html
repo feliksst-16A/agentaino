@@ -100,61 +100,66 @@
         </div>
     </header>
 
-    <!-- Artikli põhiosa -->
-    <main class="container article-layout">
-        <article>
-            <header class="article-header">
-                <h1>SEO on surnud? Ei - aga reeglid on muutunud</h1>
-                <p class="subtitle" style="font-size: 0.95rem; margin-bottom: 0;">
-                    Avaldatud: <strong>2026</strong> | Autor: <strong>Feliks Stavitski</strong> | Viimati uuendatud: <strong>juuni 2026</strong>
-                </p>
-            </header>
+    <!-- Kaheveeruline artiklipaigutus koos külgribaga -->
+    <main class="container article-layout-wrapper" style="max-width: 1100px; margin: 0 auto; padding: 60px 24px;">
+        <div class="article-grid-layout">
+            
+            <!-- Vasak veerg: artikli sisu -->
+            <div class="article-main-content">
+                <article>
+                    <header class="article-header" style="margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px;">
+                        <h1>SEO on surnud? Ei - aga reeglid on muutunud</h1>
+                        <p class="subtitle" style="font-size: 0.95rem; margin-bottom: 0;">
+                            Avaldatud: <strong>2026</strong> | Autor: <strong>Feliks Stavitski</strong> | Viimati uuendatud: <strong>juuni 2026</strong>
+                        </p>
+                    </header>
 
-            <div class="article-content">
-                <p>Vaid mõned aastad tagasi oli SEO mäng, milles ma ennast hästi tundsin. Leiad õiged märksõnad, kirjutad neile teksti ümber, ehitad ja kogud linke, ja ootad. Google premeeris kannatlikkust. Süsteem töötas. Mitte perfektselt, aga täiesti ennustatavalt.</p>
-                <p>Siis juhtus midagi, mida me kaikki nägime, aga paljud ei tahtnud uskuda: inimesed lõpetasid guugeldamise. Mitte sada protsenti, aga osaliselt. Nad hakkasid küsimusi esitama. ChatGPT-lt, Claude'ilt, Gemini'lt, Perplexity'lt. <em>"Milline raamatupidamistarkvara sobib väikeettevõttele?" "Milline on parim viis endale väike e-pood teha?" "Kas Eestis on vaja käibemaksukohustuslane olla, kui ületan 40 000 eurot aastas?"</em></p>
-                <p>Vastused tulevad kohe. Ilma reklaamideta. Ilma kümmet erinevat blogi läbi klõpsimata.</p>
-                <p>Ja korraga ongi küsimus hoopis teine: <strong>kas sinu bränd on seal vastuses sees?</strong></p>
+                    <div class="article-content">
+                        <p>Vaid mõned aastad tagasi oli SEO mäng, milles ma ennast hästi tundsin. Leiad õiged märksõnad, kirjutad neile teksti ümber, ehitad ja kogud linke, ja ootad. Google premeeris kannatlikkust. Süsteem töötas. Mitte perfektselt, aga täiesti ennustatavalt.</p>
+                        <p>Siis juhtus midagi, mida me kõik nägime, aga paljud ei tahtnud uskuda: inimesed lõpetasid guugeldamise. Mitte sada protsenti, aga osaliselt. Nad hakkasid küsimusi esitama. ChatGPT-lt, Claude'ilt, Gemini'lt, Perplexity'lt. <em>"Milline raamatupidamistarkvara sobib väikeettevõttele?" "Milline on parim viis endale väike e-pood teha?" "Kas Eestis on vaja käibemaksukohustuslane olla, kui ületan 40 000 eurot aastas?"</em></p>
+                        <p>Vastused tulevad kohe. Ilma reklaamideta. Ilma kümmet erinevat blogi läbi klõpsimata.</p>
+                        <p>Ja korraga ongi küsimus hoopis teine: <strong>kas sinu bränd on seal vastuses sees?</strong></p>
 
-                <h2>Mis täpselt on muutunud?</h2>
-                <p>SEO-s on viimased kahekümmend viis aastat põhimõtteliselt üks küsimus domineerinud: kuidas saada Google'i esimesele lehele? Esimeseks otsingu vastustes. Sellele on ehitatud terved agentuurid, tööriistad, sertifikaadiprogrammid, konverentsid.</p>
-                <p>See küsimus ise pole küll kuhugi kadunud. Google on endiselt suur. Aga otsingumootor ei ole enam see ainus koht, kus inimene vastust otsib. Ja oluline on mõista, miks see muutus on põhimõtteline, mitte ajutine nähtus.</p>
-                <p>AI-assistendid ei anna "otsingutulemusi". Nad annavad konkreetseid vastuseid. Ja neil vastustel on väga erinevad alused võrreldes Google'i esikümne tulemustega. Nad ei vaata, kellel on kõige rohkem backlinke. Nad vaatavad, kellel on kõige usaldusväärsem, selgeim, struktureeritum ja konteksti rikkam sisu.</p>
-                <p>Teise muutusena paistavad silma <strong>null-klikid</strong>. Isegi Google ise kuvab nüüd by default enamuse otsingutulemusi otse otsinguribale — "Featured Snippet", "AI Overview", "People Also Ask". Inimene saab vastuse ja ei klikigi edasi. Link sinu veebilehele võib küll seal olla, aga kuna vastus on kohe silme ees, siis sinu lingile pole vajadust klikkida.</p>
-                <p>Kolmas muutus on nüanssirikkam: inimeste otsingukäitumine on lagunenud fragmentideks. Ühed küsivad Google'ist. Teised TikTokist. Kolmandad Redditi foorumitest. Neljandad küsivad otse AI-lt. See ei ole kaos. See on uus normaalsus.</p>
+                        <h2>Mis täpselt on muutunud?</h2>
+                        <p>SEO-s on viimased kahekümmend viis aastat põhimõtteliselt üks küsimus domineerinud: kuidas saada Google'i esimesele lehele? Esimeseks otsingu vastustes. Sellele on ehitatud terved agentuurid, tööriistad, sertifikaadiprogrammid, konverentsid.</p>
+                        <p>See küsimus itse pole küll kuhugi kadunud. Google on endiselt suur. Aga otsingumootor ei ole enam see ainus koht, kus inimene vastust otsib. Ja oluline on mõista, miks see muutus on põhimõtteline, mitte ajutine nähtus.</p>
+                        <p>AI-assistendid ei anna "otsingutulemusi". Nad annavad konkreetseid vastuseid. Ja neil vastustel on väga erinevad alused võrreldes Google'i esikümne tulemustega. Nad ei vaata, kellel on kõige rohkem backlinke. Nad vaatavad, kellel on kõige usaldusväärsem, selgeim, struktureeritum ja konteksti rikkam sisu.</p>
+                        <p>Teise muutusena paistavad silma <strong>null-klikid</strong>. Isegi Google ise kuvab nüüd by default enamuse otsingutulemusi otse otsinguribale — "Featured Snippet", "AI Overview", "People Also Ask". Inimene saab vastuse ja ei klikigi edasi. Link sinu veebilehele võib küll seal olla, aga kuna vastus on kohe silme ees, siis sinu lingile pole vajadust klikkida.</p>
+                        <p>Kompleksse struktuuri ja erinevuste lahkamiseks loe meie põhjalikku võrdlust: <a href="aino-vs-geo-aeo-sge.html">AINO vs GEO vs AEO vs SGE. Mis vahe neil on?</a></p>
+                        <p style="margin-top: 16px;">Kolmas muutus on nüanssirikkam: inimeste otsingukäitumine on lagunenud fragmentideks. Ühed küsivad Google'ist. Teised TikTokist. Kolmandad Redditi foorumitest. Neljandad küsivad otse AI-lt. See ei ole kaos. See on uus normaalsus.</p>
 
-                <h2>Miks traditsiooniline SEO ei ole enam piisav?</h2>
-                <img src="../assets/traditsiooniline_SEO_pole_piisav.webp" alt="Traditsioonilise märksõnapõhise SEO ja uue põlvkonna struktureeritud AI-nähtavuse optimeerimise (AINO) strateegilise võrdlus" loading="lazy">
-                
-                <p>Olgu see asi kohe selge: traditsiooniline SEO ei ole nüüdsest täiesti kasutu. Aga see, millest enne piisas, ei pruugi enam olla piisav. Ja see on oluline vahe.</p>
-                <p>Klassikaline SEO keskendub peaasjalikult kahele asjale: märksõnadele ja autoriteedile (mõõdetuna linkide kaudu). Need on endiselt olulised. Aga mõtle, kuidas AI-mudel otsustab, millisest allikast midagi soovitada.</p>
-                <p>AI ei otsi kõige lingitumat lehte. Ta otsib lehekülge, kus on:</p>
-                <ul>
-                    <li>selge, otsene vastus küsimusele;</li>
-                    <li>kontekst, mis aitab vastust mõista;</li>
-                    <li>struktuur, mis on masinaga tõlgendatav;</li>
-                    <li>usaldusväärsus, mis tuleb autori taustast, viidetest ja konkreetsusest.</li>
-                </ul>
-                <p>Kui sinu sisu on kirjutatud nii, et märksõnatihedus on optimeeritud, aga küsimusele otsest vastust ei anta, siis AI jätab selle vaikimisi kõrvale ja läheb edasi. See on lihtne tõde, aga paljudele ettevõtetele ikka veel vastukarva.</p>
-                <p>Lisaks on probleem, mida võiks nimetada "AI ignoreerimiseks". Paljud ettevõtted on aastaid tootnud SEO-sisu, mis on sisuliselt ideaalse täpsusega, kuid seda pole kunagi päriselt struktureeritud nii, et AI saaks sealt usaldusväärset fakti otse välja tõmmata. Google indekseerib selle. AI lükkab selle kõrvale.</p>
+                        <h2>Miks traditsiooniline SEO ei ole enam piisav?</h2>
+                        <img src="../assets/traditsiooniline_SEO_pole_piisav.webp" alt="Traditsioonilise märksõnapõhise SEO ja uue põlvkonna struktureeritud AI-nähtavuse optimeerimise (AINO) strateegilise võrdlus" loading="lazy">
+                        
+                        <p>Olgu see asi kohe selge: traditsiooniline SEO ei ole nüüdsest täiesti kasutu. Kasulik põhi on alati vajalik. Aga see, millest enne piisas, ei pruugi enam olla piisav. Ja see on oluline vahe.</p>
+                        <p>Klassikaline SEO keskendub peaasjalikult kahele asjale: märksõnadele ja autoriteedile (mõõdetuna linkide kaudu). Need on endiselt olulised. Aga mõtle, kuidas AI-mudel otsustab, millisest allikast midagi soovitada.</p>
+                        <p>AI ei otsi kõige lingitumat lehte. Ta otsib lehekülge, kus on:</p>
+                        <ul>
+                            <li>selge, otsene vastus küsimusele;</li>
+                            <li>kontekst, mis aitab vastust mõista;</li>
+                            <li>struktuur, mis on masinaga tõlgendatav;</li>
+                            <li>usaldusväärsus, mis tuleb autori taustast, viidetest ja konkreetsusest.</li>
+                        </ul>
+                        <p>Kui sinu sisu on kirjutatud nii, et märksõnatihedus on optimeeritud, aga küsimusele otsest vastust ei anta, siis AI jätab selle vaikimisi kõrvale ja läheb edasi. See on lihtne tõde, aga paljudele ettevõtetele ikka veel vastukarva.</p>
+                        <p>Lisaks on probleem, mida võiks nimetada "AI ignoreerimiseks". Paljud ettevõtted on aastaid tootnud SEO-sisu, mis on sisuliselt ideaalse täpsusega, kuid seda pole kunagi päriselt struktureeritud nii, et AI saaks sealt usaldusväärset fakti otse välja tõmmata. Google indekseerib selle. AI lükkab selle kõrvale.</p>
 
-                <h2>Mis on AINO ja mida see lisab?</h2>
-                <p><strong>AINO tähendab AI Nähtavuse Optimeerimist.</strong> Optimeerimine, mis on mõeldud AI-ajastul nähtavaks saamisele. Lähemalt saad selle olemuse ja tekkepõhjustega tutvuda meie <a href="mis-on-aino.html">AI nähtavuse optimeerimise täielikus juhendis</a>.</p>
-                <p>See ei ole SEO-vastane liikumine. See on SEO loomulik järg, mis arvestab uue tegelikkusega. Osa sinu potentsiaalsetest klientidest küsib vastust AI masinalt, mitte otsingumootorilt. Ja kui sinu bränd ei ole selles vastuses, siis sind ei ole nende jaoks olemas.</p>
-                <p>AINO praktika põhineb neljal vaieldamatul sambal:</p>
-                <ol>
-                    <li><strong>Struktureeritud sisu, kiired vastused:</strong> AI-mudelid armastavad selgeid vastuseid. "Mis on X?" ja kohe esimeses lauses vastus. "Kuidas teha Y?" ja kohe selge sammsammuline juhis. Esmalt vastus, siis kontekst.</li>
-                    <li><strong>Autoriteet läbi tõendite:</strong> Kes kirjutas? Mis on tema taust? Millal uuendati? Kas on ka viiteid? AI-mudelid hindavad usaldusväärsust läbi konkreetsete märkide ning brändi mainet digitaalses maailmas tervikuna.</li>
-                    <li><strong>Mitmekanaliline esindatus:</strong> AINO tähendab, et sinu bränd on ära märkimist väärt erinevates kanalites: foorumites, uudisteplatvormidel, YouTube'is, LinkedInis, valdkondlikes väljaannetes. AI-mudelid treenivad end kõigil neil andmetel.</li>
-                    <li><strong>Selge positsioneering:</strong> Kes te olete? Mida te teete? Kellele? Miks teiega tegemist teha? Kui sellele ei saa masin kolme lausega vastata, ei räägi ta sinust.</li>
-                </ol>
+                        <h2>Mis on AINO ja mida see lisab?</h2>
+                        <p><strong>AINO tähendab AI Nähtavuse Optimeerimist.</strong> Optimeerimine, mis on mõeldud AI-ajastul nähtavaks saamisele. Lähemalt saad selle olemuse ja tekkepõhjustega tutvuda meie <a href="mis-on-aino.html">AI nähtavuse optimeerimise täielikus juhendis</a>.</p>
+                        <p>See ei ole SEO-vastane liikumine. See on SEO loomulik järg, mis arvestab uue tegelikkusega. Osa sinu potentsiaalsetest klientidest küsib vastust AI masinalt, mitte otsingumootorilt. Ja kui sinu bränd ei ole selles vastuses, siis sind ei ole nende jaoks olemas.</p>
+                        <p>AINO praktika põhineb neljal vaieldamatul sambal:</p>
+                        <ol>
+                            <li><strong>Struktureeritud sisu, kiired vastused:</strong> AI-mudelid armastavad selgeid vastuseid. "Mis on X?" ja kohe esimeses lauses vastus. "Kuidas teha Y?" ja kohe selge sammsammuline juhis. Esmalt vastus, siis kontekst.</li>
+                            <li><strong>Autoriteet läbi tõendite:</strong> Kes kirjutas? Mis on tema taust? Millal uuendati? Kas on ka viiteid? AI-mudelid hindavad usaldusväärsust läbi konkreetsete märkide ning brändi mainet digitaalses maailmas tervikuna.</li>
+                            <li><strong>Mitmekanaliline esindatus:</strong> AINO tähendab, et sinu bränd on ära märkimist väärt erinevates kanalites: foorumites, uudisteplatvormidel, YouTube'is, LinkedInis, valdkondlikes väljaannetes. AI-mudelid treenivad end kõigil neil andmetel.</li>
+                            <li><strong>Selge positsioneering:</strong> Kes te olete? Mida te teete? Kellele? Miks teiega tegemist teha? Kui sellele ei saa masin kolme lausega vastata, ei räägi ta sinust.</li>
+                        </ol>
 
                 <h2>Kuidas SEO ja AINO koos töötavad?</h2>
                 <p>Siin on koht, kus paljud hakkavad otsima kas/või vastust. Kas SEO või AINO? Kas Google või AI? Vastus on hoopis: <strong>ja</strong>.</p>
                 <p>Google on endiselt domineeriv otsingumootor. Inimesed kasutavad seda igapäevaselt. SEO-l on oma koht, oma tööriistad, oma loogika ja see ei ole kuhugi kadumas. Aga nagu e-kaubanduses oli kord küsimus "kas on vaja veebipoodi?", on praegu küsimus "kas oled optimeeritud ka AI-kanalitele?"</p>
                 <p>Praktikas tähendab see, et hea sisu arhitektuur teenib mõlemat:</p>
                 <ul>
-                    <li>Sisu, mis vastap küsimusele selgelt, toimib hästi nii Featured Snippet'is kui ka AI vastuses.</li>
+                    <li>Sisu, mis vastab küsimusele selgelt, toimib hästi nii Featured Snippet'is kui ka AI vastuses.</li>
                     <li>Autoriteetne autori profiil ja viited suurendavad usaldust nii Google E-E-A-T raamistiku kui ka AI mudeli jaoks.</li>
                     <li>Regulaarselt uuendatud ning täpne sisu hoiab sind mõlemas kanalis pildil.</li>
                 </ul>
@@ -178,7 +183,21 @@
                 </p>
             </div>
         </article>
-    </main>
+    </div>
+
+    <!-- Parem veerg: külgriba -->
+    <aside class="article-sidebar">
+        <h3 class="sidebar-title">Viimased lood</h3>
+        <ul class="sidebar-links">
+            <li><a href="aino-vs-geo-aeo-sge.html">AINO vs GEO vs AEO vs SGE</a></li>
+            <li><a href="seo-on-surnud.html" class="active">SEO on surnud? Ei, reeglid muutusid</a></li>
+            <li><a href="ai-vastustesse-checklist.html">Checklist AI vastustesse saamiseks</a></li>
+            <li><a href="mis-on-aino.html">Mis on AINO? Süvajuhend</a></li>
+        </ul>
+    </aside>
+
+</div>
+</main>
 
     <!-- Jalus -->
     <footer class="site-footer">
