@@ -3,7 +3,7 @@
    <!-- Avaleht -->
    <url>
       <loc>https://agentaino.ee/</loc>
-      <lastmod>2026-06-02</lastmod>
+      <lastmod>2026-06-03</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
@@ -14,6 +14,22 @@
       <lastmod>2026-06-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
+   </url>
+
+   <!-- Blogi arhiivi pealeht -->
+   <url>
+      <loc>https://agentaino.ee/blogi/index.html</loc>
+      <lastmod>2026-06-03</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <!-- Artikkel: AINO vs GEO vs AEO vs SGE -->
+   <url>
+      <loc>https://agentaino.ee/blogi/aino-vs-geo-aeo-sge.html</loc>
+      <lastmod>2026-06-03</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
    </url>
 
    <!-- Artikkel: SEO on surnud? Ei - aga reeglid on muutunud -->
