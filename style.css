@@ -249,7 +249,7 @@ input:focus, textarea:focus {
 }
 .services-pillars {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: 32px;
     margin-bottom: 64px;
 }
@@ -429,7 +429,7 @@ tr:last-child td {
 
 /* Blogi Grid */
 .blog-section { padding: 90px 0; background-color: #fafafa; border-top: 1px solid var(--border-color); }
-.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .blog-card { background: #ffffff; border: 1px solid var(--border-color); padding: 24px; border-radius: 6px; display: flex; flex-direction: column; }
 .blog-date { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
 .blog-card h3 a { text-decoration: none; color: var(--text-main); transition: color 0.2s; }
@@ -463,10 +463,10 @@ tr:last-child td {
 .article-content img { max-width: 100%; height: auto; border-radius: 6px; margin: 32px 0; display: block; }
 .faq-section { background-color: #fafafa; padding: 24px; border-radius: 6px; margin: 32px 0; }
 
-/* UUDSED REEGLID: Kaheveeruline artiklipaigutus ja külgriba (Sidebar) */
+/* Kaheveeruline artiklipaigutus ja külgriba (Uuendatud turvalise minmax lahendusega) */
 .article-grid-layout {
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: minmax(0, 1fr) 280px;
     gap: 56px;
     align-items: start;
 }
@@ -511,6 +511,18 @@ tr:last-child td {
     font-weight: 500;
 }
 
+/* Puhta ja skrollitava koodiploki disain */
+.article-content pre {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    margin: 24px 0;
+}
+
 /* Küpsiste bänner */
 .cookie-banner {
     position: fixed;
@@ -534,12 +546,11 @@ tr:last-child td {
 
 /* Mobiilne kohanduvus (Responsive) */
 @media (max-width: 992px) {
-    .services-pillars { grid-template-columns: 1fr; gap: 24px; }
-    .core-grid { grid-template-columns: 1fr; gap: 24px; }
-    .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .services-pillars { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .core-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
     
-    /* Külgriba kohandumine: liigub artikli alla */
-    .article-grid-layout { grid-template-columns: 1fr; gap: 48px; }
+    .article-grid-layout { grid-template-columns: minmax(0, 1fr); gap: 48px; }
     .article-sidebar {
         border-left: none;
         border-top: 1px solid var(--border-color);
@@ -584,7 +595,7 @@ tr:last-child td {
     .certificates-grid { justify-content: flex-start; gap: 16px; }
     .certificates-grid a { max-width: 180px; padding: 14px; }
     
-    .blog-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: minmax(0, 1fr); }
     .newsletter-form { flex-direction: column; }
     .certificates { text-align: center; }
     
