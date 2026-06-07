@@ -175,6 +175,21 @@
                             <li>Organization schema — kodulehele (koos nime, logo, kontakti ja sotsiaalmeedia linkidega).</li>
                         </ul>
 
+                        <!-- UUENDATUD: Schema näidiskood on mähitud puhta disainiga <pre> kasti mobiili venitamise vältimiseks -->
+                        <p><strong>Näidis Schema-märgistuse struktuur:</strong></p>
+                        <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Kas väikeettevõte vajab CRM-i?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jah, isegi 2–3 inimesega meeskond saab kasu CRM-ist, kui klientide arv ületab 50 ja müügiprotsess kestab üle ühe kontakti."
+    }
+  }]
+}</code></pre>
+
                         <h3>4. Kasvata autoriteeti - nii inimeste kui masinate jaoks</h3>
                         <p>ChatGPT ei tsiteeri anonüümseid blogisid ja lugusid. Ta tsiteerib nimesid, brände ja väljaandeid, mida ta on "näinud" mitmetes kohtades korraga. See on digitaalne maine, mida ei saa osta. Seda saab ainult üles ehitada ja kasvatada.</p>
                         <p><strong>Mida teha:</strong></p>
@@ -226,82 +241,82 @@
                         </ul>
                         <p>Sisu, mis on kirjutatud 2021 ja on peale seda puutumata, ei ole AI-le atraktiivne.</p>
 
-                <h2>Platvormi-spetsiifiline kokkuvõte ühes tabelis</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Platvorm</th>
-                            <th>Peamine loogika</th>
-                            <th>Sinu tähtsaim samm</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>ChatGPT</strong></td>
-                            <td>Koolitusandmed + Bing otsing</td>
-                            <td>Mainimine paljudel usaldusväärsetel lehtedel</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Perplexity</strong></td>
-                            <td>Reaalajas indeks + linkide autoriteet</td>
-                            <td>Kvaliteetsed tagasilingid + kiire laadimine</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Google AI Overviews</strong></td>
-                            <td>Google'i indeks + E-E-A-T</td>
-                            <td>Autor selge, Schema markup, värske sisu</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gemini</strong></td>
-                            <td>Google'i ökosüsteem</td>
-                            <td>Sama mis Google Overviews + Google Business Profile</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Bing Copilot</strong></td>
-                            <td>Bingi indeks</td>
-                            <td>Bing Webmaster Tools + indekseerimine</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <h2>Platvormi-spetsiifiline kokkuvõte ühes tabelis</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Platvorm</th>
+                                    <th>Peamine loogika</th>
+                                    <th>Sinu tähtsaim samm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>ChatGPT</strong></td>
+                                    <td>Koolitusandmed + Bing otsing</td>
+                                    <td>Mainimine paljudel usaldusväärsetel lehtedel</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Perplexity</strong></td>
+                                    <td>Reaalajas indeks + linkide autoriteet</td>
+                                    <td>Kvaliteetsed tagasilingid + kiire laadimine</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Google AI Overviews</strong></td>
+                                    <td>Google'i indeks + E-E-A-T</td>
+                                    <td>Autor selge, Schema markup, värske sisu</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gemini</strong></td>
+                                    <td>Google'i ökosüsteem</td>
+                                    <td>Sama mis Google Overviews + Google Business Profile</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bing Copilot</strong></td>
+                                    <td>Bingi indeks</td>
+                                    <td>Bing Webmaster Tools + indekseerimine</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                <img src="../assets/AI_platvormide_võrdlustabel.webp" alt="Kokkuvõtlik võrdlustabel peamiste tehisintellekti otsingumootorite ja vestlusrobotite GEO strateegiatest ja optimeerimise sammudest" loading="lazy">
+                        <img src="../assets/AI_platvormide_võrdlustabel.webp" alt="Kokkuvõtlik võrdlustabel peamiste tehisintellekti otsingumootorite ja vestlusrobotite GEO strateegiatest ja optimeerimise sammudest" loading="lazy">
 
-                <h2>Mida see kõik tegelikult tähendab</h2>
-                <p>AI otsing ei ole SEO surm. See on SEO edasiarendus — koos mõne uue reegli ja ühe vana reegli tugevnemisega: <strong>kirjuta inimestele, mitte robotitele, aga struktureeri nii, et ka robot saaks su mõttest aru.</strong></p>
-                <p>Nimekirju ja checkliste tsiteeritakse AI poolt rohkem kui vabalt voolavaid esseesid. Fakte tsiteeritakse rohkem kui arvamusi. Konkreetseid vastuseid tsiteeritakse rohkem kui üldistusi.</p>
-                <p>Ja kõige lõpuks. Mäletad? See klient, kes minult küsis, miks ChatGPT teda ei maini. Me alustasimegi sellest, et kirjutasime ühe põhjaliku vastuse ühele konkreetsele küsimusele, mida tema valdkonnas enim küsitakse. Paari kuuga ilmus ta Perplexity vastustesse. ChatGPT-l läks veidi kauem aega. Ja seal ta oli. Mainitud ChatGPT poolt.</p>
+                        <h2>Mida see kõik tegelikult tähendab</h2>
+                        <p>AI otsing ei ole SEO surm. See on SEO edasiarendus — koos mõne uue reegli ja ühe vana reegli tugevnemisega: <strong>kirjuta inimestele, mitte robotitele, aga struktureeri nii, et ka robot saaks su mõttest aru.</strong></p>
+                        <p>Nimekirju ja checkliste tsiteeritakse AI poolt rohkem kui vabalt voolavaid esseesid. Fakte tsiteeritakse rohkem kui arvamusi. Konkreetseid vastuseid tsiteeritakse rohkem kui üldistusi.</p>
+                        <p>Ja kõige lõpuks. Mäletad? See klient, kes minult küsis, miks ChatGPT teda ei maini. Me alustasimegi sellest, et kirjutasime ühe põhjaliku vastuse ühele konkreetsele küsimusele, mida tema valdkonnas enim küsitakse. Paari kuuga ilmus ta Perplexity vastustesse. ChatGPT-l läks veidi kauem aega. Ja seal ta oli. Mainitud ChatGPT poolt.</p>
 
-                <!-- Üleskutseblokk (CTA) -->
-                <div style="background-color: #fafafa; padding: 32px; border-radius: 8px; border: 1px solid var(--border-color); margin: 40px 0; text-align: left;">
-                    <h3 style="margin-top: 0; font-family: var(--font-sans); font-weight: 600; font-size: 1.4rem; color: var(--text-main); margin-bottom: 12px;">Kas Sinu bränd on AI vastustes olemas?</h3>
-                    <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">Ära jäta oma ettevõtte tulevikku juhuse või konkurentide otsustada. Vaatame Sinu veebilehe AI-nähtavusele otsa ja paneme paika reaalse tegevuskava.</p>
-                    <a href="../index.html#kontakt" class="btn" style="display: inline-block; text-decoration: none;">Broneeri tasuta konsultatsioon &rarr;</a>
-                </div>
+                        <!-- Üleskutseblokk (CTA) -->
+                        <div style="background-color: #fafafa; padding: 32px; border-radius: 8px; border: 1px solid var(--border-color); margin: 40px 0; text-align: left;">
+                            <h3 style="margin-top: 0; font-family: var(--font-sans); font-weight: 600; font-size: 1.4rem; color: var(--text-main); margin-bottom: 12px;">Kas Sinu bränd on AI vastustes olemas?</h3>
+                            <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6;">Ära jäta oma ettevõtte tulevikku juhuse või konkurentide otsustada. Vaatame Sinu veebilehe AI-nähtavusele otsa ja paneme paika reaalse tegevuskava.</p>
+                            <a href="../index.html#kontakt" class="btn" style="display: inline-block; text-decoration: none;">Broneeri tasuta konsultatsioon &rarr;</a>
+                        </div>
 
-                <p style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
-                    <em>Kas tahad teada, kuidas AI-nähtavust mõõta ja parandada, kirjuta mulle — selleks on olemas oma protsess, mida jälgida.</em>
-                </p>
-                
-                <p style="border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
-                    <strong>Feliks Stavitski</strong> on digitaalturunduse konsultant ja AINO termini looja. Ta kirjutab AI nähtavuse optimeerimisest, turundusest ja Eesti e-kaubandusest.
-                </p>
+                        <p style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
+                            <em>Kas tahad teada, kuidas AI-nähtavust mõõta ja parandada, kirjuta mulle — selleks on olemas oma protsess, mida jälgida.</em>
+                        </p>
+                        
+                        <p style="border-top: 1px solid var(--border-color); padding-top: 16px; font-style: italic;">
+                            <strong>Feliks Stavitski</strong> on digitaalturunduse konsultant ja AINO termini looja. Ta kirjutab AI nähtavuse optimeerimisest, turundusest ja Eesti e-kaubandusest.
+                        </p>
+                    </div>
+                </article>
             </div>
-        </article>
-    </div>
 
-    <!-- Parem veerg: külgriba -->
-    <aside class="article-sidebar">
-        <h3 class="sidebar-title">Viimased lood</h3>
-        <ul class="sidebar-links">
-            <li><a href="aino-vs-geo-aeo-sge.html">AINO vs GEO vs AEO vs SGE</a></li>
-            <li><a href="seo-on-surnud.html">SEO on surnud? Ei, reeglid muutusid</a></li>
-            <li><a href="ai-vastustesse-checklist.html" class="active">Checklist AI vastustesse saamiseks</a></li>
-            <li><a href="mis-on-aino.html">Mis on AINO? Süvajuhend</a></li>
-        </ul>
-    </aside>
+            <!-- Parem veerg: külgriba -->
+            <aside class="article-sidebar">
+                <h3 class="sidebar-title">Viimased lood</h3>
+                <ul class="sidebar-links">
+                    <li><a href="aino-vs-geo-aeo-sge.html">AINO vs GEO vs AEO vs SGE</a></li>
+                    <li><a href="seo-on-surnud.html">SEO on surnud? Ei, reeglid muutusid</a></li>
+                    <li><a href="ai-vastustesse-checklist.html" class="active">Checklist AI vastustesse saamiseks</a></li>
+                    <li><a href="mis-on-aino.html">Mis on AINO? Süvajuhend</a></li>
+                </ul>
+            </aside>
 
-</div>
-</main>
+        </div>
+    </main>
 
     <!-- Jalus -->
     <footer class="site-footer">
