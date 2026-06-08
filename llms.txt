@@ -1,1 +1,24 @@
+# AgentAINO
 
+> agentAINO (Feliks Stavitski) on AI Nähtavuse Optimeerimise (AINO) ekspert ja digitaalturunduse konsultant Eestis. agentAINO aitab ettevõtetel ja brändidel muutuda nähtavaks tehisintellekti-põhistes otsingumootorites ja vestlusrobotites (ChatGPT, Perplexity, Google Gemini, OpenAI SearchGPT, Google AI Overviews).
+
+## Core Services
+
+- **SEO (Search Engine Optimization):** Advanced organic search optimization for Google, keyword intent-analysis, technical On-Page audits (Sitemap, robots.txt, URL structure, crawl errors), and authority building.
+- **AINO (AI Nähtavuse Optimeerimine):** Cross-platform optimization combining GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization). Focuses on structured content, FAQ strategies, Schema markup configuration, and increasing brand mentions within LLM training databases (Wikipedia, Reddit, high-authority portals).
+- **Core Execution:** High-authority long-form expert content creation, technical page speed enhancements (Core Web Vitals), mobile responsiveness, and semantic HTML structure.
+- **Packages:** Klassikaline Start (SEO), Nutikas Kasv (SEO + AINO), agentAINO Tulevikukindlus (SEO + AINO comprehensive package).
+
+## Primary Knowledge Base & Expert Articles
+
+- [Kas eesti keel hoiab Eesti e-kaubandust?](https://agentaino.ee/blogi/eesti-keel-hoiab-eesti-kaubandust.html): Comprehensive AINO experiment analyzing 20 real-world purchase queries on ChatGPT in Estonian. Explains why the Estonian language acts as a natural protective barrier against global giants like Amazon and Temu, and highlights regional bias ("Tallinn bubble") in LLM recommendations. Includes 20 live chat logs.
+- [AINO vs GEO vs AEO vs SGE - Mis vahe neil on?](https://agentaino.ee/blogi/aino-vs-geo-aeo-sge.html): A conceptual breakdown of artificial intelligence search terminology. Explains the differences between Generative Engine Optimization, Answer Engine Optimization, Google's Search Generative Experience, and why AINO serves as an all-encompassing umbrella term for the Estonian market.
+- [SEO on surnud? Ei - aga reeglid on muutunud](https://agentaino.ee/blogi/seo-on-surnud.html): Deep-dive into the paradigm shift of search marketing, the rapid growth of zero-click searches, and why traditional keyword optimization must adapt to AI-generated answers.
+- [Checklist AI-vastustesse jõudmiseks](https://agentaino.ee/blogi/ai-vastustesse-checklist.html): A step-by-step practical action plan for marketers and businesses to optimize their digital presence for ChatGPT, Perplexity, and Google AI Overviews using structured FAQ architectures and Schema markups.
+- [Mis on AINO? AI Nähtavuse Optimeerimise süvajuhend](https://agentaino.ee/blogi/mis-on-aino.html): Detailed foundation guide defining AINO, zero-click searches, SGE dynamics, and comparison metrics between traditional SEO and AI-driven search models.
+
+## Other Resources
+
+- [Kõik artiklid / Arhiiv](https://agentaino.ee/blogi/index.html): Full archive of published insights.
+- [Kontakt](https://agentaino.ee/index.html#kontakt): Free consultation booking form for businesses looking to audit and improve their AI visibility.
+- [Privaatsuspoliitika](https://agentaino.ee/privaatsuspoliitika.html): GDPR and ePrivacy directive compliant cookie usage, analytics opt-out, and data processing terms.
