@@ -12,8 +12,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://agentaino.ee/teenused/kohalikule-ettevotejale.html">
-    <meta property="og:title" content="Rohkem kõnesid ja tööpakkumisi. Vali oma kasvuplaan | AgentAINO">
-    <meta property="og:description" content="Ma ei müü sulle keerulist koodi ega skeeme. Ma panen sinu telefoni helisema. Vaata kohalikele ettevõtetele mõeldud pakette.">
+    <meta property="og:title" content="Rohkem kõnesid ja päringuid. Vali oma plaan | AgentAINO">
+    <meta property="og:description" content="Ma ei müü sulle keerulist koodi ega skeeme. Ma panen su telefoni helisema. Vaata kohalikele ettevõtetele mõeldud pakette.">
     <meta property="og:image" content="https://agentaino.ee/assets/og-image.jpg">
 
     <!-- Peamine stiilifail -->
@@ -74,24 +74,6 @@
         .plan-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-        }
-        .plan-card.popular {
-            border: 2px solid var(--text-main);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-        .popular-badge {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--text-main);
-            color: #ffffff;
-            padding: 4px 16px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-radius: 20px;
         }
         .plan-badge-icon {
             font-size: 2.2rem;
@@ -202,7 +184,7 @@
         }
     </style>
 
-    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD -->
     <script>
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
@@ -242,10 +224,12 @@
                 <span></span>
             </button>
 
+            <!-- UUENDATUD NAVIGATSIOON -->
             <nav class="main-nav">
                 <a href="../index.html#minu-lugu">Minu lugu</a>
                 <a href="../index.html#tunnustused">Tunnustused</a>
                 <a href="../index.html#teenused">Teenused</a>
+                <a href="kohalikule-ettevotjale.html">Paketid</a>
                 <a href="../index.html#blogi">Blogi</a>
                 <a href="#kontakt">Kontakt</a>
             </nav>
@@ -256,14 +240,14 @@
         
         <!-- Hero sektsioon -->
         <section class="landing-hero">
-            <h1>Rohkem kõnesid ja tööpakkumisi. <br><em>Vähem tühje päevi.</em></h1>
-            <p class="hero-lead">Sinu kliendid ei otsi sind enam kollastest lehekülgedest. Nad otsivad ehitajat, saunameistrit, autoremonti või iluteenust Google’ist. Kui sind seal pole, teeb tööd sinu konkurent.</p>
+            <h1>Rohkem kõnesid ja päringuid. <br><em>Vähem tühje päevi.</em></h1>
+            <p class="hero-lead">Sinu kliendid otsivad ehitajat, saunameistrit, autoremonti või iluteenust otse Google’ist või küsivad AI-lt. Kui sind seal pole, teeb sinu tööd sinu konkurent.</p>
             
             <div class="pitch-banner">
-                "Ma ei müü sulle keerulist koodi, 'skeeme' ega IT-terminid. Ma panen sinu telefoni helisema. Vali pakett, mis vastab sinu ettevõtte praegusele etapile."
+                "Ma ei müü sulle keerulist koodi, 'skeeme' ega IT-termineid. Ma panen su telefoni helisema. Vali pakett, mis vastab sinu ettevõtte praegusele etapile."
             </div>
             
-            <h2 id="paketid" style="border-bottom: none; padding-bottom: 0; margin-bottom: 8px;">Vali oma kasvuplaan</h2>
+            <h2 id="paketid" style="border-bottom: none; padding-bottom: 0; margin-bottom: 8px;">Vali oma plaan</h2>
             <p style="color: var(--text-muted);">Klõpsa sobiva paketi nupule, et täita kontaktivorm.</p>
         </section>
 
@@ -287,9 +271,8 @@
                 <a href="#kontakt" class="btn package-select-btn" style="display: block; text-align: center; margin-top: 24px; text-decoration: none;" data-package="Stardipauk (299 €)">Vali see pakett</a>
             </div>
 
-            <!-- Pakett 2 (Populaarne) -->
-            <div class="plan-card popular">
-                <div class="popular-badge">Enim populaarne ⭐</div>
+            <!-- Pakett 2 -->
+            <div class="plan-card">
                 <div class="plan-badge-icon">🥈</div>
                 <h3>Klientide Magnet</h3>
                 <p class="plan-subtitle">Too Google'ist rohkem päringuid. Mõistlik investeering väikeettevõtjale, kes tahab, et koduleht ja Google hakkaksid reaalselt uusi kliente sisse tooma.</p>
