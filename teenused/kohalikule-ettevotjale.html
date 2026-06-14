@@ -1,1 +1,433 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koduleht ja Google'i nähtavus kohalikule ettevõtjale | AgentAINO</title>
+    <meta name="description" content="Rohkem kõnesid ja tööpakkumisi väikeettevõtetele. Kodulehed ja Google Maps profiilide seadistamine ehitajatele, töökodadele ja iluteenustele ilma keerulise IT-jututa.">
+    
+    <link rel="canonical" href="https://agentaino.ee/teenused/kohalikule-ettevotejale.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentaino.ee/teenused/kohalikule-ettevotejale.html">
+    <meta property="og:title" content="Rohkem kõnesid ja tööpakkumisi. Vali oma kasvuplaan | AgentAINO">
+    <meta property="og:description" content="Ma ei müü sulle keerulist koodi ega skeeme. Ma panen sinu telefoni helisema. Vaata kohalikele ettevõtetele mõeldud pakette.">
+    <meta property="og:image" content="https://agentaino.ee/assets/og-image.jpg">
 
+    <!-- Peamine stiilifail -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Maandumislehe spetsiifilised disaini-override'id hinnapakettidele ja protsessile -->
+    <style>
+        .landing-hero {
+            padding: 120px 0 60px 0;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .landing-hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 24px;
+        }
+        .landing-hero .hero-lead {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pitch-banner {
+            background-color: #fafafa;
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 64px;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        /* Paketitabeli 3-veeruline võrgustik */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin: 40px 0 80px 0;
+            align-items: start;
+        }
+        .plan-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px 32px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .plan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+        .plan-card.popular {
+            border: 2px solid var(--text-main);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-main);
+            color: #ffffff;
+            padding: 4px 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 20px;
+        }
+        .plan-badge-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .plan-card h3 {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+        .plan-card .plan-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            min-height: 44px;
+            line-height: 1.4;
+        }
+        .plan-price {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        .plan-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 32px;
+        }
+        .plan-card li {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+        .plan-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+        .plan-card .plan-result {
+            font-size: 0.95rem;
+            background: #fafafa;
+            padding: 16px;
+            border-radius: 6px;
+            border-left: 3px solid var(--text-main);
+            color: var(--text-main);
+            margin-top: auto;
+        }
+        
+        /* Protsessi sektsioon */
+        .process-section {
+            background-color: #fafafa;
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 48px;
+        }
+        .process-step {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .step-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .process-step h3 {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        .process-step p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 992px) {
+            .plans-grid, .process-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .landing-hero h1 {
+                font-size: 2.6rem;
+            }
+            .plan-card .plan-subtitle {
+                min-height: auto;
+            }
+        }
+    </style>
+
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <script>
+      if (window.location.search.includes('admin=true')) {
+          localStorage.setItem('peida_minu_liiklus', 'true');
+          alert('Sinu seade on nüüd Google Analyticsi statistikast edukalt välistatud!');
+      }
+
+      function loadGoogleAnalytics() {
+          if (localStorage.getItem('peida_minu_liiklus') === 'true') return;
+          if (localStorage.getItem('cookie_consent') === 'accepted') {
+              var gaScript = document.createElement('script');
+              gaScript.async = true;
+              gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1CKNGQQE0X";
+              document.head.appendChild(gaScript);
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1CKNGQQE0X');
+          }
+      }
+
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+          loadGoogleAnalytics();
+      }
+    </script>
+</head>
+<body>
+
+    <!-- Päis -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">Agent<span>AINO</span></a>
+            
+            <button class="menu-toggle" aria-label="Ava menüü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <a href="../index.html#minu-lugu">Minu lugu</a>
+                <a href="../index.html#tunnustused">Tunnustused</a>
+                <a href="../index.html#teenused">Teenused</a>
+                <a href="../index.html#blogi">Blogi</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero sektsioon -->
+        <section class="landing-hero">
+            <h1>Rohkem kõnesid ja tööpakkumisi. <br><em>Vähem tühje päevi.</em></h1>
+            <p class="hero-lead">Sinu kliendid ei otsi sind enam kollastest lehekülgedest. Nad otsivad ehitajat, saunameistrit, autoremonti või iluteenust Google’ist. Kui sind seal pole, teeb tööd sinu konkurent.</p>
+            
+            <div class="pitch-banner">
+                "Ma ei müü sulle keerulist koodi, 'skeeme' ega IT-terminid. Ma panen sinu telefoni helisema. Vali pakett, mis vastab sinu ettevõtte praegusele etapile."
+            </div>
+            
+            <h2 id="paketid" style="border-bottom: none; padding-bottom: 0; margin-bottom: 8px;">Vali oma kasvuplaan</h2>
+            <p style="color: var(--text-muted);">Klõpsa sobiva paketi nupule, et täita kontaktivorm.</p>
+        </section>
+
+        <!-- Hinnaplaanide 3-veeruline võrgustik -->
+        <section class="plans-grid">
+            
+            <!-- Pakett 1 -->
+            <div class="plan-card">
+                <div class="plan-badge-icon">🥉</div>
+                <h3>Stardipauk</h3>
+                <p class="plan-subtitle">Ole Google'is leitav. Ideaalne alustavale või seni "nähtamatule" ettevõttele, kes vajab ametlikku ja usaldusväärset esindust.</p>
+                <div class="plan-price">299 €</div>
+                <ul>
+                    <li><strong>1-leheline selge veebileht:</strong> Kliendid näevad kohe ühe pilguga, mida täpselt pakud ja kuidas ühendust võtta.</li>
+                    <li><strong>Mobiilisõbralik ekraanivaade:</strong> Enamik kliente otsib abi telefonist – sinu leht avaneb mobiilis kiiresti ja korrektselt.</li>
+                    <li><strong>Kiire kontaktivorm ja kaart:</strong> Päringu saatmine ja sinu töökoja või salongi leidmine on tehtud kliendile imelihtsaks.</li>
+                    <li><strong>Google'i kaardirakenduse (Maps) profiil:</strong> Sinu äri ilmub kohalikes otsingutes, kui keegi otsib teenust sinu piirkonnas.</li>
+                    <li><strong>Konto kasutusjuhend:</strong> Saad lihtsa spikri, kuidas oma profiili ise edasi hallata – IT-meest pole hiljem vaja.</li>
+                </ul>
+                <p class="plan-result"><strong>Tulemus:</strong> Sinu ettevõte on Google'is ametlikult olemas, leitav ja jätab korrektse, professionaalse esmamulje.</p>
+                <a href="#kontakt" class="btn package-select-btn" style="display: block; text-align: center; margin-top: 24px; text-decoration: none;" data-package="Stardipauk (299 €)">Vali see pakett</a>
+            </div>
+
+            <!-- Pakett 2 (Populaarne) -->
+            <div class="plan-card popular">
+                <div class="popular-badge">Enim populaarne ⭐</div>
+                <div class="plan-badge-icon">🥈</div>
+                <h3>Klientide Magnet</h3>
+                <p class="plan-subtitle">Too Google'ist rohkem päringuid. Mõistlik investeering väikeettevõtjale, kes tahab, et koduleht ja Google hakkaksid reaalselt uusi kliente sisse tooma.</p>
+                <div class="plan-price">599 €</div>
+                <ul>
+                    <li><strong>Kuni 5-leheline põhjalik veebileht:</strong> Saan sinu teenused (nt vundamenditööd, katusetööd, fassaadid) eraldi lehtedele lahti kirjutada. Google armastab seda.</li>
+                    <li><strong>Müügile suunatud tekstid:</strong> Kirjutan lehele tekstid, mis ei kirjelda lihtsalt tööd, vaid veenavad külastajat just sinult tellima.</li>
+                    <li><strong>Google'i profiili täisseadistus:</strong> Panen paika täpselt õiged kategooriate ja märksõnad, et Google tõstaks sind otsingutes ettepoole.</li>
+                    <li><strong>10 optimeeritud fotot ja 5 postitust:</strong> Sinu profiil näeb välja elav, aktiivne ja usaldusväärne.</li>
+                    <li><strong>Automaatne arvustuste süsteem:</strong> Lihtne viis klientidelt viie tärni hinnangute kogumiseks. Rohkem tähti = rohkem kliente.</li>
+                    <li><strong>Kliendi otsetee (WhatsApp/Messenger):</strong> Kliendid saavad sinuga ühendust võtta ühe klikiga otse telefonist.</li>
+                    <li><strong>Külastatavuse statistika:</strong> Näed selgelt, kui palju inimesi su lehte vaatab ja kust nad tulevad.</li>
+                </ul>
+                <p class="plan-result"><strong>Tulemus:</strong> Tugev kohalik nähtavus ja pidev päringute vool. See pakett teenib oma maksumuse tagasi tavaliselt juba esimeste uute klientidega.</p>
+                <a href="#kontakt" class="btn package-select-btn" style="display: block; text-align: center; margin-top: 24px; text-decoration: none;" data-package="Klientide Magnet (599 €)">Vali see pakett</a>
+            </div>
+
+            <!-- Pakett 3 -->
+            <div class="plan-card">
+                <div class="plan-badge-icon">🥇</div>
+                <h3>Dominatsioon</h3>
+                <p class="plan-subtitle">Jäta konkurendid tahavaatepeeglisse. Ettevõtjale, kes ei taha lihtsalt pildil olla, vaid soovib oma piirkonnas ja valdkonnas võtta kindla liidripositsiooni.</p>
+                <div class="plan-price">1099 €</div>
+                <ul>
+                    <li><strong>Kõik "Klientide Magnet" hüved</strong> ja rohkemgi veel.</li>
+                    <li><strong>Kuni 10-leheline suurveeb:</strong> Katan ära kõik võimalikud teenused, alamteenused ja piirkonnad, kus tegutsed.</li>
+                    <li><strong>Eraldi sihtlehed teenustele:</strong> Iga sinu pakutav teenus saab eraldi lehe, mis võitleb Google'is esikoha eest.</li>
+                    <li><strong>Konkurentide salarelvade analüüs:</strong> Vaatan üle, mida teevad sinu piirkonna suurimid konkurendid, ja teen sinu profiili nendest paremaks.</li>
+                    <li><strong>Pidev kohalolek (20 postitust):</strong> Sinu Google'i profiil püsib aktiivne ja pildil mitu kuud järjest.</li>
+                    <li><strong>Korduma Kippuvad Küsimused (KKK):</strong> Vastan klientide peamistele hirmudele ja küsimustele ära enne, kui nad jõuavad telefoni haarata.</li>
+                    <li><strong>3 põhjalikku artiklit:</strong> Toovad Google'ist tasuta lisakülastajaid pika aja jooksul.</li>
+                    <li><strong>30 päeva otsest tuge:</strong> Olen pärast lehe valmimist sinu jaoks olemas, aitan ja muudan jooksvalt, mida vaja.</li>
+                </ul>
+                <p class="plan-result"><strong>Tulemus:</strong> Sinu ettevõte on oma piirkonna turuliider. Maksimaalne nähtavus otsingus ja konkurentidest sammu võrra ees olemine.</p>
+                <a href="#kontakt" class="btn package-select-btn" style="display: block; text-align: center; margin-top: 24px; text-decoration: none;" data-package="Dominatsioon (1099 €)">Vali see pakett</a>
+            </div>
+
+        </section>
+
+        <!-- Protsessi sektsioon -->
+        <section class="process-section">
+            <div class="container">
+                <h2>Kuidas ma töötan? Lihtne 3-sammuline protsess</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1.</div>
+                        <h3>Lühike vestlus</h3>
+                        <p>Kaardistan sinu teenused ja piirkonna. Sina räägid oma ärist, mina teen plaanid.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2.</div>
+                        <h3>Mina teen töö</h3>
+                        <p>Sina saad keskenduda oma põhitööle (ehitamisele, remontimisele, teenuse pakkumisele). Mina panen püsti veebi ja seadistan Google'i.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3.</div>
+                        <h3>Kliendid tulevad</h3>
+                        <p>Sinu ettevõte on nähtav, päringud hakkavad laekuma ja telefon helisema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt / Tellimine -->
+        <section id="kontakt" class="contact-section" style="border-top: none;">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2>Sinu järgmine samm</h2>
+                    <p>Ära jäta päringuid konkurentidele. Vali ülevalt endale sobiv pakett või täida siinsamas vorm ja panen sinu äri Google'is kiiresti tööle.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/feliksstavitski/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="selected-plan">Valitud pakett</label>
+                        <input type="text" id="selected-plan" name="valitud_pakett" placeholder="Vali pakett ülevalt või kirjuta siia vabas vormis" readonly style="background-color: #f9f9f9; cursor: not-allowed;">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Sinu nimi / Ettevõte</label>
+                        <input type="text" id="name" name="nimi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-post</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lisamärkused või küsimused (Valikuline)</label>
+                        <textarea id="message" name="sonum" rows="4" placeholder="Kirjuta siia, mis valdkonnas või piirkonnas tegutsed..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Saada tellimissoov &rarr;</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Jalus -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 AgentAINO. Kõik õigused kaitstud. | <a href="../privaatsuspoliitika.html" style="color: var(--text-muted); text-decoration: underline;">Privaatsuspoliitika</a></p>
+                <p class="footer-contact">E-post: info@agentaino.ee | Tel: 56 86 76 60</p>
+            </div>
+            <div class="footer-right">
+                <div class="certificates">
+                    <span class="cert-badge">AEO Certified 2026</span>
+                    <span class="cert-badge">Green Web Host</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- KÜPSISTE NÕUSOLEKU BÄNNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-container">
+            <p>Kasutame Sinu veebikogemuse parandamiseks, liikluse analüüsimiseks ja reklaamide isikupärastamiseks küpsiseid. Klikkides "Nõustu kõigiga", annad loa kõigi küpsiste kasutamiseks. Saad oma eelistustega tutvuda ja nõusoleku tagasi võtta meie <a href="../privaatsuspoliitika.html">privaatsuspoliitikas</a>.</p>
+            <div class="cookie-buttons">
+                <button id="decline-cookies" class="btn btn-secondary">Keeldu</button>
+                <button id="accept-cookies" class="btn">Nõustu kõigiga</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skript valitud paketi automaatseks kontaktivormi täitmiseks -->
+    <script src="../script.js"></script>
+    <script>
+        document.querySelectorAll('.package-select-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const packageName = this.getAttribute('data-package');
+                const planInput = document.getElementById('selected-plan');
+                if (planInput) {
+                    planInput.value = packageName;
+                    planInput.style.borderColor = 'var(--accent)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
