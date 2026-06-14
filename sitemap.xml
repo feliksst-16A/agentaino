@@ -16,6 +16,14 @@
       <priority>0.3</priority>
    </url>
 
+   <!-- Maandumisleht: Kohalikule Ettevõtjale (UUS) -->
+   <url>
+      <loc>https://agentaino.ee/teenused/kohalikule-ettevotjale.html</loc>
+      <lastmod>2026-06-14</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+
    <!-- Blogi arhiivi pealeht -->
    <url>
       <loc>https://agentaino.ee/blogi/index.html</loc>
