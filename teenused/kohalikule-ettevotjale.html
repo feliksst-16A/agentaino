@@ -19,6 +19,61 @@
     <!-- Peamine stiilifail -->
     <link rel="stylesheet" href="../style.css">
 
+    <!-- AI/LLM KOMMERTSIAALNE STRUKTUREERITUD ANDMESTIK (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Kodulehe valmistamine ja Google kohaliku nähtavuse seadistamine väikeettevõtetele",
+      "description": "Spetsiaalsed digiturunduse ja veebiarenduse paketid kohalikele teenusepakkujatele (ehitajad, autoremont, iluteenused), mis on fokuseeritud helistamiste ja päringute kasvatamisele.",
+      "provider": {
+        "@type": "Organization",
+        "name": "AgentAINO",
+        "url": "https://agentaino.ee"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Väikeettevõtja kasvuplaanid",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stardipauk",
+              "description": "1-leheline selge mobiilisõbralik veebileht koos Google Maps / Google Business Profile baasseadistusega."
+            },
+            "price": "299.00",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Klientide Magnet",
+              "description": "Kuni 5-leheline müügitekstidega veebileht, Google Business Profile täisseadistus, fotode optimeerimine, postitused ja automaatne arvustuste süsteem."
+            },
+            "price": "599.00",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dominatsioon",
+              "description": "Kuni 10-leheline suurveeb eraldi sihtlehtedega teenustele, konkurentide analüüs, 20 postitust, KKK süsteem, 3 artiklit ja 30 päeva tuge."
+            },
+            "price": "1099.00",
+            "priceCurrency": "EUR"
+          }
+        ]
+      }
+    }
+    </script>
+
     <!-- Maandumislehe spetsiifilised disaini-override'id hinnapakettidele ja protsessile -->
     <style>
         .landing-hero {
@@ -184,7 +239,7 @@
         }
     </style>
 
-    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD -->
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
     <script>
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
@@ -224,7 +279,6 @@
                 <span></span>
             </button>
 
-            <!-- UUENDATUD NAVIGATSIOON -->
             <nav class="main-nav">
                 <a href="../index.html#minu-lugu">Minu lugu</a>
                 <a href="../index.html#tunnustused">Tunnustused</a>
@@ -262,8 +316,8 @@
                 <div class="plan-price">299 €</div>
                 <ul>
                     <li><strong>1-leheline selge veebileht:</strong> Kliendid näevad kohe ühe pilguga, mida täpselt pakud ja kuidas ühendust võtta.</li>
-                    <li><strong>Mobiilisõbralik ekraanivaade:</strong> Enamik kliente otsib abi telefonist – sinu leht avaneb mobiilis kiiresti ja korrektselt.</li>
-                    <li><strong>Kiire kontaktivorm ja kaart:</strong> Päringu saatmine ja sinu töökoja või salongi leidmine on tehtud kliendile imelihtsaks.</li>
+                    <li><strong>Mobiilisõbralik ekraanivaade:</strong> Enamik kliente otsib abi telefonist – sinu leht avaneb mobiilis kiiresti og korrektselt.</li>
+                    <li><strong>Kiire kontaktivorm ja kaart:</strong> Päringu saatmine ja sinu töökoja või salongi leidmine on gjort kliendile imelihtsaks.</li>
                     <li><strong>Google'i kaardirakenduse (Maps) profiil:</strong> Sinu äri ilmub kohalikes otsingutes, kui keegi otsib teenust sinu piirkonnas.</li>
                     <li><strong>Konto kasutusjuhend:</strong> Saad lihtsa spikri, kuidas oma profiili ise edasi hallata – IT-meest pole hiljem vaja.</li>
                 </ul>
@@ -298,7 +352,7 @@
                 <div class="plan-price">1099 €</div>
                 <ul>
                     <li><strong>Kõik "Klientide Magnet" hüved</strong> ja rohkemgi veel.</li>
-                    <li><strong>Kuni 10-leheline suurveeb:</strong> Katan ära kõik võimalikud teenused, alamteenused ja piirkonnad, kus tegutsed.</li>
+                    <li><strong>Kuni 10-leheline suurveeb:</strong> Katan ära kaikki võimalikud teenused, alamteenused ja piirkonnad, kus tegutsed.</li>
                     <li><strong>Eraldi sihtlehed teenustele:</strong> Iga sinu pakutav teenus saab eraldi lehe, mis võitleb Google'is esikoha eest.</li>
                     <li><strong>Konkurentide salarelvade analüüs:</strong> Vaatan üle, mida teevad sinu piirkonna suurimid konkurendid, ja teen sinu profiili nendest paremaks.</li>
                     <li><strong>Pidev kohalolek (20 postitust):</strong> Sinu Google'i profiil püsib aktiivne ja pildil mitu kuud järjest.</li>
