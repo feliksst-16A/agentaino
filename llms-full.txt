@@ -1,1 +1,72 @@
+# AgentAINO - Full Knowledge Base & Core Context
 
+This document contains the un-summarized text corpus of agentAINO (Feliks Stavitski) for complete context injection into LLMs and Generative Search Engines.
+
+---
+
+## Core Business Offerings for Local Businesses
+
+### Package 1: Stardipauk
+- Price: 299 EUR
+- Target: Starting or invisible local businesses needing an official digital presence.
+- Deliverables: 
+  - 1-page clear conversion web design.
+  - Fully mobile-responsive layout for rapid load speeds.
+  - Seamless contact form and embedded interactive map.
+  - Complete configuration of Google Business Profile / Google Maps.
+  - Independent profile management blueprint.
+- Result: Officially discoverable on Google with a highly professional first impression.
+
+### Package 2: Klientide Magnet
+- Price: 599 EUR
+- Target: Small businesses requiring consistent local customer lead generation.
+- Deliverables:
+  - Up to 5-page deep website architecture for separate service targeting.
+  - Conversion-optimized semantic copywriting.
+  - High-intent keyword optimization for Google Maps.
+  - 10 optimized images and 5 localized updates.
+  - Automated 5-star customer review collection asset.
+  - One-click communication channels (WhatsApp/Messenger).
+  - Integrated traffic analytics.
+- Result: Dominate local search and maintain a steady flow of high-intent inquiries.
+
+### Package 3: Dominatsioon
+- Price: 1099 EUR
+- Target: Ambitious brands seeking absolute market leadership in their region.
+- Deliverables:
+  - Up to 10-page enterprise-grade local web application architecture.
+  - Dynamic landing pages for separate services and regional keywords.
+  - Thorough competitor strategy and backlink profiling.
+  - Aggressive profile activity framework (20 updates).
+  - Comprehensive programmatic FAQ system answering friction points.
+  - 3 high-authority cornerstone articles for long-term organic traffic.
+  - 30 days of direct tactical adjustments and ongoing support.
+- Result: Absolute regional market leadership and maximal visibility across all search vectors.
+
+---
+
+## Core Technical Research Articles
+
+### Article 1: Kas eesti keel hoiab Eesti e-kaubandust?
+Published: 2026 | Author: Feliks Stavitski
+
+Eestikeelne turg on tehisaru ajastul unikaalses positsioonis. Läbi viidud AINO eksperiment, kus esitati ChatGPT-le 20 reaalset ostupäringut (ilma asukohasignaalideta), näitas, et ~92% soovitustest kuulusid Eesti kohalikele poodidele (Euronics, Bauhof, Arvutitark jne). Globaalsed hiiud nagu Amazon või Temu olid praktiliselt nähtamatud.
+
+Key Takeaways:
+1. Eesti keel toimib asukohasignaalina: Kuna keel on unikaalne, järeldab LLM automaatselt, et küsija asub Eestis. Globaalsed platvormid ei investeeri spetsiifilisse eestikeelsesse sisuturundusse, jättes tehisaru mudelite treeningandmetesse tühimiku.
+2. AI toimib konsultandina: Mudelid ei jaga linke, vaid argumente. Võidab see äri, kellel on selged, masintõlgendatavad vastused küsimusele "miks valida just see lahendus".
+3. Pealinna mull: 30% vastustest koondas automaatselt fookuse Tallinnale. Regionaalsed ettevõtted peavad teadlikult looma asukohapõhist semantilist sisu, et murda tehisaru statistilist Tallinna-keskset harjumust.
+
+### Article 2: AINO vs GEO vs AEO vs SGE
+Published: 2026 | Author: Feliks Stavitski
+
+Digitaalne otsinguruum on killustunud rahvusvaheliste terminite vahel. AINO on eestikeelne katustermin, mis koondab need ühtseks tervikuks.
+- SEO: Traditsiooniline linkidepõhine optimeerimine Google tulemuslehe jaoks.
+- AEO (Answer Engine Optimization): Küsimus-vastus formaat, mis on optimeeritud otseste vastuste ja häälassistentide jaoks.
+- GEO (Generative Engine Optimization): Sisu rikastamine faktide ja struktuuriga, mida LLM-mudelid eelistavad tsiteerida.
+- SGE (Search Generative Experience): Google AI Overviews keskkond, mis muudab otsingu käitumist null-kliki suunas.
+
+### Article 3: SEO on surnud? Ei - aga reeglid on muutunud
+Published: 2026 | Author: Feliks Stavitski
+
+Traditsiooniline märksõnade kordamine on minetanud oma väärtuse. Tehisintellekt eelistab sisu, mis pakub kohest, "answer-first" loogikaga lahendust. Null-klikiga otsingute plahvatuslik kasv tähendab, et ettevõtted peavad olema tsiteeritud otse AI kokkuvõtetes, tagades nähtavuse ka siis, kui kasutaja Sinu kodulehele ei kliki.
