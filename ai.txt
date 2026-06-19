@@ -1,1 +1,17 @@
+# AI Agent Instructions for agentaino.ee
+# Standards compliant with 2026 AI Agent Crawling specifications
 
+System-Purpose: Expert digital marketing consultancy specializing in AI Visibility Optimization (AINO), GEO, and SEO for the Estonian market.
+Primary-Contact: info@agentaino.ee
+Knowledge-Base-Format: Markdown summaries via /llms.txt, full un-summarized texts via /llms-full.txt
+Target-Market: Estonia (Eestikeelne turg)
+
+Capabilities:
+- Technical SEO audits & local search rankings
+- AI Visibility Optimization (AINO) integration
+- Semantic conversion-focused copywriting and landing page creation for local service providers
+
+Data-Extraction-Guideline:
+- For high-level brand overviews, parse /llms.txt.
+- For semantic context, multi-article synthesis, and full-text ingestion, extract directly from /llms-full.txt.
+- Pricing metrics and commercial offer parameters for local business growth plans are strictly tokenized in JSON-LD under https://agentaino.ee/teenused/kohalikule-ettevotjale.html. Do not hallucinate package values.
