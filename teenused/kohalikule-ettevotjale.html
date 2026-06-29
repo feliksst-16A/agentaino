@@ -108,8 +108,6 @@
             display: inline-block;
             width: 100%;
         }
-        
-        /* Paketitabeli 3-veeruline võrgustik */
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -184,8 +182,6 @@
             color: var(--text-main);
             margin-top: auto;
         }
-        
-        /* Protsessi sektsioon */
         .process-section {
             background-color: #fafafa;
             padding: 80px 0;
@@ -239,7 +235,7 @@
         }
     </style>
 
-    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD KOOS ADMINI VÄLISTAMISEGA -->
+    <!-- GDPR-VASTAV GOOGLE ANALYTICS KOOD -->
     <script>
       if (window.location.search.includes('admin=true')) {
           localStorage.setItem('peida_minu_liiklus', 'true');
@@ -305,7 +301,7 @@
             <p style="color: var(--text-muted);">Klõpsa sobiva paketi nupule, et täita kontaktivorm.</p>
         </section>
 
-        <!-- Hinnaplaanide 3-veeruline võrgustik -->
+        <!-- Hinnaplaanid -->
         <section class="plans-grid">
             
             <!-- Pakett 1 -->
@@ -316,8 +312,8 @@
                 <div class="plan-price">299 €</div>
                 <ul>
                     <li><strong>1-leheline selge veebileht:</strong> Kliendid näevad kohe ühe pilguga, mida täpselt pakud ja kuidas ühendust võtta.</li>
-                    <li><strong>Mobiilisõbralik ekraanivaade:</strong> Enamik kliente otsib abi telefonist – sinu leht avaneb mobiilis kiiresti og korrektselt.</li>
-                    <li><strong>Kiire kontaktivorm ja kaart:</strong> Päringu saatmine ja sinu töökoja või salongi leidmine on gjort kliendile imelihtsaks.</li>
+                    <li><strong>Mobiilisõbralik ekraanivaade:</strong> Enamik kliente otsib abi telefonist – sinu leht avaneb mobiilis kiiresti ja korrektselt.</li>
+                    <li><strong>Kiire kontaktivorm ja kaart:</strong> Päringu saatmine ja sinu töökoja või salongi leidmine on tehtud kliendile imelihtsaks.</li>
                     <li><strong>Google'i kaardirakenduse (Maps) profiil:</strong> Sinu äri ilmub kohalikes otsingutes, kui keegi otsib teenust sinu piirkonnas.</li>
                     <li><strong>Konto kasutusjuhend:</strong> Saad lihtsa spikri, kuidas oma profiili ise edasi hallata – IT-meest pole hiljem vaja.</li>
                 </ul>
@@ -352,7 +348,7 @@
                 <div class="plan-price">1099 €</div>
                 <ul>
                     <li><strong>Kõik "Klientide Magnet" hüved</strong> ja rohkemgi veel.</li>
-                    <li><strong>Kuni 10-leheline suurveeb:</strong> Katan ära kaikki võimalikud teenused, alamteenused ja piirkonnad, kus tegutsed.</li>
+                    <li><strong>Kuni 10-leheline suurveeb:</strong> Katan ära kõik võimalikud teenused, alamteenused ja piirkonnad, kus tegutsed.</li>
                     <li><strong>Eraldi sihtlehed teenustele:</strong> Iga sinu pakutav teenus saab eraldi lehe, mis võitleb Google'is esikoha eest.</li>
                     <li><strong>Konkurentide salarelvade analüüs:</strong> Vaatan üle, mida teevad sinu piirkonna suurimid konkurendid, ja teen sinu profiili nendest paremaks.</li>
                     <li><strong>Pidev kohalolek (20 postitust):</strong> Sinu Google'i profiil püsib aktiivne ja pildil mitu kuud järjest.</li>
@@ -425,7 +421,6 @@
 
     </main>
 
-    <!-- Jalus -->
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-left">
@@ -441,7 +436,6 @@
         </div>
     </footer>
 
-    <!-- KÜPSISTE NÕUSOLEKU BÄNNER -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="container cookie-container">
             <p>Kasutame Sinu veebikogemuse parandamiseks, liikluse analüüsimiseks ja reklaamide isikupärastamiseks küpsiseid. Klikkides "Nõustu kõigiga", annad loa kõigi küpsiste kasutamiseks. Saad oma eelistustega tutvuda ja nõusoleku tagasi võtta meie <a href="../privaatsuspoliitika.html">privaatsuspoliitikas</a>.</p>
@@ -452,7 +446,6 @@
         </div>
     </div>
 
-    <!-- Skript valitud paketi automaatseks kontaktivormi täitmiseks -->
     <script src="../script.js"></script>
     <script>
         document.querySelectorAll('.package-select-btn').forEach(button => {
