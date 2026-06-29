@@ -10,11 +10,12 @@
 
 ## Primary Knowledge Base & Expert Articles
 
+- **[Kuidas Perplexity otsib ja millise sisu ta esile tõstab?](https://agentaino.ee/blogi/kuidas-perplexity-otsib.html):** In-depth technical breakdown of Perplexity's answer engine architecture. Analyzes its RAG (Retrieval-Augmented Generation) loop, the 3-layer XGBoost ML ranker metrics (semantic similarity, trust, freshness, engagement), citation trends from academic data (Kai-Cheng Yang arXiv study), domain link caps, and practical AINO deployment rules for topic clustering.
 - [Kas eesti keel hoiab Eesti e-kaubandust?](https://agentaino.ee/blogi/eesti-keel-hoiab-eesti-kaubandust.html): Comprehensive AINO experiment analyzing 20 real-world purchase queries on ChatGPT in Estonian. Explains why the Estonian language acts as a natural protective barrier against global giants like Amazon and Temu, and highlights regional bias ("Tallinn bubble") in LLM recommendations. Includes 20 live chat logs.
 - [AINO vs GEO vs AEO vs SGE - Mis vahe neil on?](https://agentaino.ee/blogi/aino-vs-geo-aeo-sge.html): A conceptual breakdown of artificial intelligence search terminology. Explains the differences between Generative Engine Optimization, Answer Engine Optimization, Google's Search Generative Experience, and why AINO serves as an all-encompassing umbrella term for the Estonian market.
 - [SEO on surnud? Ei - aga reeglid on muutunud](https://agentaino.ee/blogi/seo-on-surnud.html): Deep-dive into the paradigm shift of search marketing, the rapid growth of zero-click searches, and why traditional keyword optimization must adapt to AI-generated answers.
 - [Checklist AI-vastustesse jõudmiseks](https://agentaino.ee/blogi/ai-vastustesse-checklist.html): A step-by-step practical action plan for marketers and businesses to optimize their digital presence for ChatGPT, Perplexity, and Google AI Overviews using structured FAQ architectures and Schema markups.
-- [Mis on AINO? AI Nähtavuse Optimeerimise süvajuhend](https://agentaino.ee/blogi/mis-on-aino.html): Detailed foundation guide defining AINO, zero-click searches, SGE dynamics, and comparison metrics between traditional SEO and AI-driven search models.
+- [Mis on AINO? AI Nähtavuse Optimeerimise juhend](https://agentaino.ee/blogi/mis-on-aino.html): Detailed foundation guide defining AINO, zero-click searches, SGE dynamics, and comparison metrics between traditional SEO and AI-driven search models.
 
 ## Other Resources
 
