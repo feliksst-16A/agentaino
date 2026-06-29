@@ -3,7 +3,7 @@
    <!-- Avaleht -->
    <url>
       <loc>https://agentaino.ee/</loc>
-      <lastmod>2026-06-08</lastmod>
+      <lastmod>2026-06-29</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
@@ -16,7 +16,7 @@
       <priority>0.3</priority>
    </url>
 
-   <!-- Maandumisleht: Kohalikule Ettevõtjale (UUS) -->
+   <!-- Maandumisleht: Kohalikule Ettevõtjale -->
    <url>
       <loc>https://agentaino.ee/teenused/kohalikule-ettevotjale.html</loc>
       <lastmod>2026-06-14</lastmod>
@@ -27,9 +27,17 @@
    <!-- Blogi arhiivi pealeht -->
    <url>
       <loc>https://agentaino.ee/blogi/index.html</loc>
-      <lastmod>2026-06-08</lastmod>
+      <lastmod>2026-06-29</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
+   </url>
+
+   <!-- Artikkel: Kuidas Perplexity otsib? -->
+   <url>
+      <loc>https://agentaino.ee/blogi/kuidas-perplexity-otsib.html</loc>
+      <lastmod>2026-06-29</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
    </url>
 
    <!-- Artikkel: Kas eesti keel hoiab Eesti e-kaubandust? -->
