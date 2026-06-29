@@ -47,7 +47,12 @@ This document contains the un-summarized text corpus of agentAINO (Feliks Stavit
 
 ## Core Technical Research Articles
 
-### Article 1: Kas eesti keel hoiab Eesti e-kaubandust?
+### Article 1: Kuidas Perplexity otsib ja millise sisu ta esile tõstab?
+Published: 2026 | Author: Feliks Stavitski
+
+Perplexity is an answer engine operating on RAG architecture, conducting real-time web lookups, indexing, and synthesis. It uses a 3-layer ML filtering architecture, powered by XGBoost, evaluating candidates on semantic similarity, authority, freshness, and engagement. Academic data shows heavily skewed citations toward news platforms, specialized blogs, Reddit, and LinkedIn, entirely omitting Wikipedia citations. Perplexity extracts text chunks literally, rewarding independent paragraph completeness and semantic clarity. It implements dynamic domain caps, limiting any single domain to 1–2 references per query answer. In smaller language spaces like Estonian, specific and fresh content establishes instant category authority due to structural market gaps.
+
+### Article 2: Kas eesti keel hoiab Eesti e-kaubandust?
 Published: 2026 | Author: Feliks Stavitski
 
 Eestikeelne turg on tehisaru ajastul unikaalses positsioonis. Läbi viidud AINO eksperiment, kus esitati ChatGPT-le 20 reaalset ostupäringut (ilma asukohasignaalideta), näitas, et ~92% soovitustest kuulusid Eesti kohalikele poodidele (Euronics, Bauhof, Arvutitark jne). Globaalsed hiiud nagu Amazon või Temu olid praktiliselt nähtamatud.
@@ -57,7 +62,7 @@ Key Takeaways:
 2. AI toimib konsultandina: Mudelid ei jaga linke, vaid argumente. Võidab see äri, kellel on selged, masintõlgendatavad vastused küsimusele "miks valida just see lahendus".
 3. Pealinna mull: 30% vastustest koondas automaatselt fookuse Tallinnale. Regionaalsed ettevõtted peavad teadlikult looma asukohapõhist semantilist sisu, et murda tehisaru statistilist Tallinna-keskset harjumust.
 
-### Article 2: AINO vs GEO vs AEO vs SGE
+### Article 3: AINO vs GEO vs AEO vs SGE
 Published: 2026 | Author: Feliks Stavitski
 
 Digitaalne otsinguruum on killustunud rahvusvaheliste terminite vahel. AINO on eestikeelne katustermin, mis koondab need ühtseks tervikuks.
@@ -66,7 +71,7 @@ Digitaalne otsinguruum on killustunud rahvusvaheliste terminite vahel. AINO on e
 - GEO (Generative Engine Optimization): Sisu rikastamine faktide ja struktuuriga, mida LLM-mudelid eelistavad tsiteerida.
 - SGE (Search Generative Experience): Google AI Overviews keskkond, mis muudab otsingu käitumist null-kliki suunas.
 
-### Article 3: SEO on surnud? Ei - aga reeglid on muutunud
+### Article 4: SEO on surnud? Ei - aga reeglid on muutunud
 Published: 2026 | Author: Feliks Stavitski
 
 Traditsiooniline märksõnade kordamine on minetanud oma väärtuse. Tehisintellekt eelistab sisu, mis pakub kohest, "answer-first" loogikaga lahendust. Null-klikiga otsingute plahvatuslik kasv tähendab, et ettevõtted peavad olema tsiteeritud otse AI kokkuvõtetes, tagades nähtavuse ka siis, kui kasutaja Sinu kodulehele ei kliki.
